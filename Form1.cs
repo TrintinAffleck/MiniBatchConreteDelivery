@@ -20,7 +20,7 @@ namespace MiniBatchConreteDelivery
 
 		private void HeaderLabel_Click(object sender, EventArgs e)
 		{
-			Console.WriteLine("Label 1 Clicked");
+			
 		}
 
 		private void LookUpGroupBox_Enter(object sender, EventArgs e)
@@ -66,19 +66,14 @@ namespace MiniBatchConreteDelivery
 
 		}
 
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-			Console.WriteLine("Clicked DataGridview1");
-		}
+
 
 		private void TransactionSystemForm_Load(object sender, EventArgs e)
 		{
-            // TODO: This line of code loads data into the 'miniBatchDataSet.Product' table. You can move, or remove it, as needed.
-            this.productTableAdapter.Fill(this.miniBatchDataSet.Product);
-            // TODO: This line of code loads data into the 'miniBatchDataSet.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.miniBatchDataSet.Customer);
-            // TODO: This line of code loads data into the 'miniBatchDataSet.Invoice' table. You can move, or remove it, as needed.
-            this.invoiceTableAdapter.Fill(this.miniBatchDataSet.Invoice);
+			this.customerTableAdapter1.Fill(this.miniBatchDataSetNew.Customer);
+			this.productTableAdapter1.Fill(this.miniBatchDataSetNew.Product);
+			this.invoiceTableAdapter1.Fill(this.miniBatchDataSetNew.Invoice);
+		
 
 
 		}
@@ -108,5 +103,44 @@ namespace MiniBatchConreteDelivery
 			
 		}
 
+		private void CustomerListClearBtn_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void InvoiceHistoryEditBtn_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void InvoiceHistoryClearBtn_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void InvoiceHistoryClearFieldsBtn_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void InvoiceHistorySaveBtn_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void InvoiceHistoryGroupBox_Enter(object sender, EventArgs e)
+		{
+
+		}
+
+		private void Creation_TimeLabel_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void Creation_DeliveryCostTextBox_TextChanged(object sender, EventArgs e)
+		{
+		
+		}
 	}
 }

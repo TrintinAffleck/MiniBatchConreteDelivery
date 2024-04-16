@@ -1,0 +1,144 @@
+Item,Description,Qty,Value
+trWash,Trailer Dye washout charge,0,$35.00 
+trovrnit,Over Night trailer rental.  6:00 PM - 9:00 AM  Returned by 9 AM next day  ** Trailer MUST NOT be unhooked from truck  ** MUST be washed out till water runs clear  **Secured over night with another vehicle parked behind it,0,$95.00 
+trOT,Driver    Over time @  $1.75 per minute  past alotted time of _________ minutes    X_________________________________,0,$1.75 
+tr,U-HAUL Trailer rent @ $30.00 per hour  *******MAXIMUM SPEED 70 KPH********,0,$35.00 
+Total,,0,$0.00 
+ToolRnt,"Please CLEAN & WASH all tools before concrete sets, RETURN to Mini Batch Concrete by 4:30 TODAY if you can't finish today return before 9:00 AM tomorrow   THANKS",0,$0.00 
+tip for driver,tip for delivery driver,0,$0.00 
+SSandYd,1 Cubic Yard Washed Sand,0,$95.00 
+SSand1/4Yd,1/4 Cubic Yard Washed Sand,0,$35.00 
+SSand1/2Yd,1/2 Cubic Yard Washed Sand,0,$65.00 
+SRocYd,1 Cubic Yard Washed Rock,0,$115.00 
+SRoc1/4Yd,1/4 Cubic Yard Washed Rock,0,$45.00 
+SRoc1/2Yd,1/2 Cubic Yard Washed Rock,0,$75.00 
+Srebar,"10mm. ReBar 1/2""     per/foot  Includes Custom Cut to Spec.",0,$0.95 
+Sblocful,"Concrete Retaining Block  60""x30""x30""  One cubic yard 4,698#",0,$0.00 
+Rwhel,Wheelbarrow Rental 4 hour,0,$15.00 
+Rvib3hr,Pencil Vibrator  7'whip 3 hr Rental,0,$30.00 
+Rvib24hr,Pencil Vibrator 7 ' whip 24hr rental,0,$30.00 
+RtrowHnd,Steel Hand Trowel,0,$7.00 
+Rtpkg,"Finishing Tool Package  Hand Float, Trowel, Edger,Cutter  Bull-Float, Fresno, Broom, 2 Poles",0,$65.00 
+Rrake,Concrete Rake,0,$5.00 
+Rpowtr,Power Trowel,0,$75.00 
+rPole,1 -  6' pole extetion,0,$5.00 
+Rfres36,"Fresno 36 ""   2 Extention Handles",0,$15.00 
+"Rfres24""","Fresno 24 ""  2 Extention Handles",0,$15.00 
+RflotHnd,Magnesium Hand Float,0,$7.00 
+RedgHnd,Hand Edger,0,$7.00 
+rDumpTr,14' Dump Trailer / Day,0,$95.00 
+RcutPol,Pole Seam Cutter Brass  2 Extention Handles,0,$15.00 
+RcutHnd,Hand Seam Cutter,0,$7.00 
+Rcomp,"Flat Plate Compactor 12""",0,$65.00 
+Rbw,Rental on Big White 2.29 Meter Trailerl # 5  Rental rate of $250.00 per day,0,$250.00 
+"RbullTw48""","48"" Bull Float Twist Handle  2 Extention Handles",0,$15.00 
+"Rbull36""","36"" Bull Float  2 Extention Handles",0,$15.00 
+"Rbull30""","30"" Bull Float  2 Extention Handles",0,$15.00 
+Rbroom,"Finishing Broom 36""  2 Extention Handles",0,$15.00 
+R1m,Rental for 1 Meter Trailer #   Rental Rate of $200.00 per Day,0,$200.00 
+POZ,1% BASF Pozzolith Accelerant,0,$22.00 
+plas,BASF MasterRheobuild Plasticizer  High-Range Water-Reducing Admixture,0,$22.00 
+P&F,Place and Finish Concrete,0,$2.00 
+Note,Note here,0,$0.00 
+nate,REDUCED the daily rent from $200 to $150,0,$0.00 
+Lid - Ratchet Strap,Lid - Ratchet Strap,0,$130.00 
+LF Somerville,Load Fee on Somerville Trailer,0,$15.00 
+Fibr,Polypropylene Fiber re-enforcement,0,$22.00 
+DISCOUNT,Customer Loyalty Discount on concrete 7%,0,$0.00 
+Deposit,Deposit on Trailer Rental,0,$0.00 
+DelXtr,Delivery Charge for extra trailer,0,$80.00 
+delx,Driver    Over time @  $1.75 per minute  past alotted time of _________ minutes    X_________________________________,0,$1.75 
+Delay,Fritz-Pak DELAY SET / Meter,0,$20.00 
+Del320,Delivery Charge    FIRST __________ MINUTES OF DRIVER WAIT TIME INCLUDED IN DELIVERY CHARGE;  THEREAFTER DRIVER WAIT TIME CHARGED @ $1.75/ MINUTE,0,$320.00 
+Del300,Delivery Charge      FIRST __________ MINUTES OF DRIVER WAIT TIME INCLUDED IN DELIVERY CHARGE;  THEREAFTER DRIVER WAIT TIME CHARGED @ $1.75/ MINUTE,0,$300.00 
+Del270,"Delivery Charge Calmar, Lamont, Bon Accord      FIRST __________ MINUTES OF DRIVER WAIT TIME INCLUDED IN DELIVERY CHARGE;  THEREAFTER DRIVER WAIT TIME CHARGED @ $1.75/ MINUTE",0,$270.00 
+Del250,Delivery Charge   FIRST __________ MINUTES OF DRIVER WAIT TIME INCLUDED IN DELIVERY CHARGE;  THEREAFTER DRIVER WAIT TIME CHARGED @ $1.75/ MINUTE,0,$250.00 
+Del230,Delivery Charge Devon      FIRST __________ MINUTES OF DRIVER WAIT TIME INCLUDED IN DELIVERY CHARGE;  THEREAFTER DRIVER WAIT TIME CHARGED @ $1.75/ MINUTE,0,$230.00 
+Del220,Delivery Charge      FIRST __________ MINUTES OF DRIVER WAIT TIME INCLUDED IN DELIVERY CHARGE;  THEREAFTER DRIVER WAIT TIME CHARGED @ $1.75/ MINUTE,0,$220.00 
+Del215,Delivery Charge    FIRST __________ MINUTES OF DRIVER WAIT TIME INCLUDED IN DELIVERY CHARGE;  THEREAFTER DRIVER WAIT TIME CHARGED @ $1.75/ MINUTE,0,$215.00 
+Del210,Delivery Charge      FIRST __________ MINUTES OF DRIVER WAIT TIME INCLUDED IN DELIVERY CHARGE;  THEREAFTER DRIVER WAIT TIME CHARGED @ $1.75/ MINUTE,0,$210.00 
+Del205,Delivery Charge      FIRST __________ MINUTES OF DRIVER WAIT TIME INCLUDED IN DELIVERY CHARGE;  THEREAFTER DRIVER WAIT TIME CHARGED @ $1.75/ MINUTE,0,$205.00 
+Del200,"Delivery Charge  Nisku, Ft.  Sask,      FIRST __________ MINUTES OF DRIVER WAIT TIME INCLUDED IN DELIVERY CHARGE;  THEREAFTER DRIVER WAIT TIME CHARGED @ $1.75/ MINUTE",0,$200.00 
+Del190,Delivery Charge      FIRST __________ MINUTES OF DRIVER WAIT TIME INCLUDED IN DELIVERY CHARGE;  THEREAFTER DRIVER WAIT TIME CHARGED @ $1.75/ MINUTE,0,$190.00 
+dc,Ancillary Damage Contract,0,$15.00 
+air,(5-7%) Air Entrainment  Helps to prevent spalling during  freeze / thaw cycles,0,$7.00 
+after Hour,After Hour Delivery Sur-Charge,0,$95.00 
+2nd site deliv,Driver redirected to second pour site,0,$65.00 
+140,Meter 40 MPA Concrete,0,$388.00 
+135,Meter 35  MPA Concrete,0,$374.00 
+132,Meter 32 MPA Concrete,0,$357.00 
+130,Meter 30 MPA Concrete,0,$345.00 
+128,Meter 28 MPA Concrete,0,$343.00 
+125,Meter 25 MPA Concrete,0,$338.00 
+120,"Meter 20 MPA Concrete, Fence Post Mix",0,$334.00 
+0.94,0.9 Meter 40 MPA Concrete,0,$380.00 
+0.93,0.9 Meter 30 MPA Concrete,0,$339.00 
+0.932,0.9 Meter 32 MPA Concrete,0,$352.00 
+0.935,0.9 Meter 35 MPA Concrete,0,$366.00 
+0.92,"0.9 Meter 20 MPA Concrete, Fence Post Mix",0,$325.00 
+0.925,0.9 Meter 25 MPA Concrete,0,$331.00 
+0.928,0.9 Meter 28 MPA Concrete,0,$337.00 
+0.84,0.8 Meter 40 MPA Concrete,0,$375.00 
+0.83,0.8 Meter 30 MPA Concrete,0,$335.00 
+0.832,0.8 Meter 32 MPA Concrete,0,$345.00 
+0.835,0.8 Meter 35 MPA Concrete,0,$362.00 
+0.82,"0.8 Meter 20 MPA concrete, Fence Post Mix",0,$316.00 
+0.825,0.8 Meter 25 MPA Concrete,0,$325.00 
+0.828,0.8 Meter 28 MPA Concrete,0,$330.00 
+0.752,"0.75  Meter 20 MPA Concrete, Fence Post Mix",0,$313.00 
+0.7525,0.75  Meter 25 MPA Concrete,0,$322.00 
+0.7528,0.75  Meter 28MPA Concrete,0,$327.00 
+0.753,0.75  Meter 30 MPA Concrete,0,$331.00 
+0.7532,0.75 Meter 32 MPA Concrete,0,$343.00 
+0.7535,0.75 Meter 35 MPA Concrete,0,$360.00 
+0.754,0.75 Meter 40 MPA Concrete,0,$373.00 
+0.74,0.70 Meter 40 MPA Concrete,0,$370.00 
+0.73,0.70  Meter 30 MPA Concrete,0,$329.00 
+0.732,0.70 Meter 32 MPA Concrete,0,$339.00 
+0.735,0.70 Meter 35 MPA Concrete,0,$357.00 
+0.72,"0.70 Meter 20 MPA Concrete, Fence Post Mix",0,$311.00 
+0.725,0.70  Meter 25 MPA Concrete,0,$319.00 
+0.728,0.70  Meter 28MPA Concrete,0,$325.00 
+0.64,0.60 Meter 40 MPA Concrete,0,$365.00 
+0.63,0.60  Meter 30 MPA Concrete,0,$324.00 
+0.632,0.60 Meter 32 MPA Concrete,0,$335.00 
+0.635,0.60 Meter 35 MPA Concrete,0,$351.00 
+0.62,"0.60  Meter 20 MPA Concrete, Fence Post Mix",0,$305.00 
+0.625,0.60  Meter 25 MPA Concrete,0,$313.00 
+0.628,0.60  Meter 28MPA Concrete,0,$320.00 
+0.54,0.50 Meter 40 MPA Concrete,0,$328.00 
+0.53,0.50  Meter 30 MPA Concrete,0,$300.00 
+0.532,0.50 Meter 32 MPA Concrete,0,$313.00 
+0.535,0.50 Meter 35 MPA Concrete,0,$321.00 
+0.52,"0.50  Meter 20 MPA Concrete, Fence Post Mix",0,$285.00 
+0.525,0.50  Meter 25 MPA Concrete,0,$290.00 
+0.528,0.50  Meter 28MPA Concrete,0,$296.00 
+0.44,0.40 Meter 40 MPA Concrete,0,$321.00 
+0.43,0.40  Meter 30 MPA Concrete,0,$285.00 
+0.432,0.40 Meter 32 MPA Concrete,0,$294.00 
+0.435,0.40 Meter 35 MPA Concrete,0,$308.00 
+0.42,"0.40  Meter 20 MPA Concrete, Fence Post Mix",0,$275.00 
+0.425,0.40  Meter 25 MPA Concrete,0,$278.00 
+0.428,0.40  Meter 28MPA Concrete,0,$284.00 
+0.34,0.30 Meter 40 MPA Concrete,0,$314.00 
+0.33,0.30  Meter 30 MPA Concrete,0,$278.00 
+0.332,0.30 Meter 32 MPA Concrete,0,$292.00 
+0.335,0.30 Meter 35 MPA Concrete,0,$305.00 
+0.32,"0.30  Meter 20 MPA Concrete, Fence Post Mix",0,$261.00 
+0.325,0.30  Meter 25 MPA Concrete,0,$268.00 
+0.328,0.30  Meter 28MPA Concrete,0,$275.00 
+0.252,"0.25  Meter 20 MPA Concrete, Fence Post Mix",0,$238.00 
+0.2525,0.25  Meter 25 MPA Concrete,0,$243.00 
+0.2528,0.25  Meter 28MPA Concrete,0,$248.00 
+0.253,0.25  Meter 30 MPA Concrete,0,$254.00 
+0.2532,0.25 Meter 32 MPA Concrete,0,$275.00 
+0.2535,0.25 Meter 35 MPA Concrete,0,$294.00 
+0.254,0.25 Meter 40 MPA Concrete,0,$307.00 
+0.24,0.20 Meter 40 MPA Concrete,0,$276.00 
+0.23,0.20  Meter 30 MPA Concrete,0,$249.00 
+0.232,0.20 Meter 32 MPA Concrete,0,$250.00 
+0.235,0.20 Meter 35 MPA Concrete,0,$263.00 
+0.22,"0.20  Meter 20 MPA Concrete, Fence Post Mix",0,$223.00 
+0.225,0.20  Meter 25 MPA Concrete,0,$237.00 
+0.228,0.20  Meter 28MPA Concrete,0,$238.00 
+Total,,0,"$28,767.45 "

@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,10 +65,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MiniBatchDataSet.Designer.cs">
+    <Compile Include="MiniBatchDataSetNew.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MiniBatchDataSet.xsd</DependentUpon>
+      <DependentUpon>MiniBatchDataSetNew.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,17 +95,18 @@
     <None Include="DatabaseFundamentalsDataSet.xss">
       <DependentUpon>DatabaseFundamentalsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="MiniBatchDataSet.xsc">
-      <DependentUpon>MiniBatchDataSet.xsd</DependentUpon>
+    <None Include="MiniBatchDataSetNew.xsc">
+      <DependentUpon>MiniBatchDataSetNew.xsd</DependentUpon>
     </None>
-    <None Include="MiniBatchDataSet.xsd">
+    <None Include="MiniBatchDataSetNew.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MiniBatchDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>MiniBatchDataSetNew.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="MiniBatchDataSet.xss">
-      <DependentUpon>MiniBatchDataSet.xsd</DependentUpon>
+    <None Include="MiniBatchDataSetNew.xss">
+      <DependentUpon>MiniBatchDataSetNew.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -50,38 +50,52 @@
 			this.NameTextBox = new System.Windows.Forms.TextBox();
 			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
 			this.CustomerListGroupBox = new System.Windows.Forms.GroupBox();
-			this.CustomerListDataGrid = new System.Windows.Forms.DataGridView();
-			this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.customerNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.balanceOwingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.customerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-			this.miniBatchDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.miniBatchDataSet = new MiniBatchConreteDelivery.MiniBatchDataSet();
+			this.addressNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.orderNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.customerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			this.miniBatchDataSetNew = new MiniBatchConreteDelivery.MiniBatchDataSetNew();
+			this.CustomerListSaveBtn = new System.Windows.Forms.Button();
+			this.CustomerListEditBtn = new System.Windows.Forms.Button();
+			this.CustomerListClearFieldsBtn = new System.Windows.Forms.Button();
+			this.CustomerListClearBtn = new System.Windows.Forms.Button();
+			this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.HistoryGroupBox = new System.Windows.Forms.GroupBox();
+			this.InvoiceHistorySaveBtn = new System.Windows.Forms.Button();
 			this.InvoiceHistoryDataGrid = new System.Windows.Forms.DataGridView();
 			this.invoiceNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dueDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.deliveryCostDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.discountAmtDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.orderNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.productNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.invoiceBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+			this.InvoiceHistoryEditBtn = new System.Windows.Forms.Button();
+			this.InvoiceHistoryClearFieldsBtn = new System.Windows.Forms.Button();
+			this.InvoiceHistoryClearBtn = new System.Windows.Forms.Button();
 			this.ProductsOnOrderGroupBox = new System.Windows.Forms.GroupBox();
+			this.ProductsSaveBtn = new System.Windows.Forms.Button();
 			this.ProductsOnOrderDataGrid = new System.Windows.Forms.DataGridView();
+			this.itemCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.productDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.qtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.valueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.productNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.reOrderQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.unitOfMeassureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.productDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.sellPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			this.ProductsEditBtn = new System.Windows.Forms.Button();
+			this.ProductsClearFieldsBtn = new System.Windows.Forms.Button();
+			this.ProductsClearBtn = new System.Windows.Forms.Button();
 			this.invoiceNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dueDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.deliveryCostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.discountAmtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.invoiceTableAdapter = new MiniBatchConreteDelivery.MiniBatchDataSetTableAdapters.InvoiceTableAdapter();
-			this.tableAdapterManager1 = new MiniBatchConreteDelivery.MiniBatchDataSetTableAdapters.TableAdapterManager();
-			this.customerTableAdapter = new MiniBatchConreteDelivery.MiniBatchDataSetTableAdapters.CustomerTableAdapter();
-			this.productTableAdapter = new MiniBatchConreteDelivery.MiniBatchDataSetTableAdapters.ProductTableAdapter();
-			this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.CreateOrderInvoiceGroupBox = new System.Windows.Forms.GroupBox();
 			this.InvoiceGroupBox = new System.Windows.Forms.GroupBox();
 			this.Creation_InvoiceNumberComboBox = new System.Windows.Forms.ComboBox();
@@ -104,29 +118,42 @@
 			this.Creation_TimeLabel = new System.Windows.Forms.Label();
 			this.Creation_OrderNumberLabel = new System.Windows.Forms.Label();
 			this.Creation_OrderDateLabel = new System.Windows.Forms.Label();
-			this.customerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.productTableAdapter1 = new MiniBatchConreteDelivery.MiniBatchDataSetNewTableAdapters.ProductTableAdapter();
+			this.tableAdapterManager = new MiniBatchConreteDelivery.MiniBatchDataSetNewTableAdapters.TableAdapterManager();
+			this.invoiceTableAdapter1 = new MiniBatchConreteDelivery.MiniBatchDataSetNewTableAdapters.InvoiceTableAdapter();
+			this.invoiceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			this.customerTableAdapter1 = new MiniBatchConreteDelivery.MiniBatchDataSetNewTableAdapters.CustomerTableAdapter();
+			this.PmtMtdComboBox = new System.Windows.Forms.ComboBox();
+			this.Creation_PmtMtdLabel = new System.Windows.Forms.Label();
+			this.Creation_ProductsPurchasedLabel = new System.Windows.Forms.Label();
+			this.listBox1 = new System.Windows.Forms.ListBox();
+			this.productBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
 			this.menuStrip1.SuspendLayout();
 			this.LookupByGroupBox.SuspendLayout();
 			this.InvoiceOrdersGroupBox.SuspendLayout();
 			this.ProductsGroupBox.SuspendLayout();
 			this.CustomerGroupBox.SuspendLayout();
 			this.CustomerListGroupBox.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.CustomerListDataGrid)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.miniBatchDataSetBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.miniBatchDataSet)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.miniBatchDataSetNew)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
 			this.HistoryGroupBox.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.InvoiceHistoryDataGrid)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource2)).BeginInit();
 			this.ProductsOnOrderGroupBox.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.ProductsOnOrderDataGrid)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
 			this.CreateOrderInvoiceGroupBox.SuspendLayout();
 			this.InvoiceGroupBox.SuspendLayout();
 			this.CustomerGroupBox2.SuspendLayout();
 			this.OrderInfoGroupBox.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// menuStrip1
@@ -179,7 +206,7 @@
 			// 
 			this.ClearAllFieldsBtn1.Location = new System.Drawing.Point(625, 146);
 			this.ClearAllFieldsBtn1.Name = "ClearAllFieldsBtn1";
-			this.ClearAllFieldsBtn1.Size = new System.Drawing.Size(109, 30);
+			this.ClearAllFieldsBtn1.Size = new System.Drawing.Size(100, 30);
 			this.ClearAllFieldsBtn1.TabIndex = 6;
 			this.ClearAllFieldsBtn1.Text = "Clear All Fields";
 			this.ClearAllFieldsBtn1.UseVisualStyleBackColor = true;
@@ -187,7 +214,7 @@
 			// 
 			// LookupSearchBtn
 			// 
-			this.LookupSearchBtn.Location = new System.Drawing.Point(773, 146);
+			this.LookupSearchBtn.Location = new System.Drawing.Point(765, 146);
 			this.LookupSearchBtn.Margin = new System.Windows.Forms.Padding(4);
 			this.LookupSearchBtn.Name = "LookupSearchBtn";
 			this.LookupSearchBtn.Size = new System.Drawing.Size(100, 30);
@@ -339,28 +366,41 @@
 			// 
 			// CustomerListGroupBox
 			// 
-			this.CustomerListGroupBox.Controls.Add(this.CustomerListDataGrid);
+			this.CustomerListGroupBox.Controls.Add(this.dataGridView1);
+			this.CustomerListGroupBox.Controls.Add(this.CustomerListSaveBtn);
+			this.CustomerListGroupBox.Controls.Add(this.CustomerListEditBtn);
+			this.CustomerListGroupBox.Controls.Add(this.CustomerListClearFieldsBtn);
+			this.CustomerListGroupBox.Controls.Add(this.CustomerListClearBtn);
 			this.CustomerListGroupBox.Location = new System.Drawing.Point(20, 263);
 			this.CustomerListGroupBox.Name = "CustomerListGroupBox";
-			this.CustomerListGroupBox.Size = new System.Drawing.Size(1025, 230);
+			this.CustomerListGroupBox.Size = new System.Drawing.Size(1025, 219);
 			this.CustomerListGroupBox.TabIndex = 2;
 			this.CustomerListGroupBox.TabStop = false;
 			this.CustomerListGroupBox.Text = "Customer List";
 			// 
-			// CustomerListDataGrid
+			// dataGridView1
 			// 
-			this.CustomerListDataGrid.AutoGenerateColumns = false;
-			this.CustomerListDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.CustomerListDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn,
+			this.dataGridView1.AutoGenerateColumns = false;
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.customerNumberDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
             this.balanceOwingDataGridViewTextBoxColumn,
-            this.phoneNumberDataGridViewTextBoxColumn});
-			this.CustomerListDataGrid.DataSource = this.customerBindingSource2;
-			this.CustomerListDataGrid.Location = new System.Drawing.Point(3, 20);
-			this.CustomerListDataGrid.Name = "CustomerListDataGrid";
-			this.CustomerListDataGrid.Size = new System.Drawing.Size(998, 166);
-			this.CustomerListDataGrid.TabIndex = 0;
+            this.phoneNumberDataGridViewTextBoxColumn,
+            this.addressNumberDataGridViewTextBoxColumn,
+            this.orderNumberDataGridViewTextBoxColumn});
+			this.dataGridView1.DataSource = this.customerBindingSource1;
+			this.dataGridView1.Location = new System.Drawing.Point(16, 24);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.Size = new System.Drawing.Size(995, 150);
+			this.dataGridView1.TabIndex = 10;
+			// 
+			// customerNumberDataGridViewTextBoxColumn
+			// 
+			this.customerNumberDataGridViewTextBoxColumn.DataPropertyName = "CustomerNumber";
+			this.customerNumberDataGridViewTextBoxColumn.HeaderText = "CustomerNumber";
+			this.customerNumberDataGridViewTextBoxColumn.Name = "customerNumberDataGridViewTextBoxColumn";
+			this.customerNumberDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// nameDataGridViewTextBoxColumn
 			// 
@@ -368,54 +408,101 @@
 			this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
 			this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
 			// 
-			// customerNumberDataGridViewTextBoxColumn
-			// 
-			this.customerNumberDataGridViewTextBoxColumn.DataPropertyName = "CustomerNumber";
-			this.customerNumberDataGridViewTextBoxColumn.HeaderText = "CustomerNumber";
-			this.customerNumberDataGridViewTextBoxColumn.MinimumWidth = 150;
-			this.customerNumberDataGridViewTextBoxColumn.Name = "customerNumberDataGridViewTextBoxColumn";
-			this.customerNumberDataGridViewTextBoxColumn.Width = 150;
-			// 
 			// balanceOwingDataGridViewTextBoxColumn
 			// 
 			this.balanceOwingDataGridViewTextBoxColumn.DataPropertyName = "BalanceOwing";
 			this.balanceOwingDataGridViewTextBoxColumn.HeaderText = "BalanceOwing";
-			this.balanceOwingDataGridViewTextBoxColumn.MinimumWidth = 150;
 			this.balanceOwingDataGridViewTextBoxColumn.Name = "balanceOwingDataGridViewTextBoxColumn";
-			this.balanceOwingDataGridViewTextBoxColumn.Width = 150;
 			// 
 			// phoneNumberDataGridViewTextBoxColumn
 			// 
 			this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
 			this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
-			this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 150;
 			this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-			this.phoneNumberDataGridViewTextBoxColumn.Width = 150;
 			// 
-			// customerBindingSource2
+			// addressNumberDataGridViewTextBoxColumn
 			// 
-			this.customerBindingSource2.DataMember = "Customer";
-			this.customerBindingSource2.DataSource = this.miniBatchDataSetBindingSource;
+			this.addressNumberDataGridViewTextBoxColumn.DataPropertyName = "AddressNumber";
+			this.addressNumberDataGridViewTextBoxColumn.HeaderText = "AddressNumber";
+			this.addressNumberDataGridViewTextBoxColumn.Name = "addressNumberDataGridViewTextBoxColumn";
 			// 
-			// miniBatchDataSetBindingSource
+			// orderNumberDataGridViewTextBoxColumn
 			// 
-			this.miniBatchDataSetBindingSource.DataSource = this.miniBatchDataSet;
-			this.miniBatchDataSetBindingSource.Position = 0;
+			this.orderNumberDataGridViewTextBoxColumn.DataPropertyName = "OrderNumber";
+			this.orderNumberDataGridViewTextBoxColumn.HeaderText = "OrderNumber";
+			this.orderNumberDataGridViewTextBoxColumn.Name = "orderNumberDataGridViewTextBoxColumn";
 			// 
-			// miniBatchDataSet
+			// customerBindingSource1
 			// 
-			this.miniBatchDataSet.DataSetName = "MiniBatchDataSet";
-			this.miniBatchDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			this.customerBindingSource1.DataMember = "Customer";
+			this.customerBindingSource1.DataSource = this.miniBatchDataSetNew;
+			// 
+			// miniBatchDataSetNew
+			// 
+			this.miniBatchDataSetNew.DataSetName = "MiniBatchDataSetNew";
+			this.miniBatchDataSetNew.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// CustomerListSaveBtn
+			// 
+			this.CustomerListSaveBtn.Location = new System.Drawing.Point(911, 180);
+			this.CustomerListSaveBtn.Name = "CustomerListSaveBtn";
+			this.CustomerListSaveBtn.Size = new System.Drawing.Size(100, 30);
+			this.CustomerListSaveBtn.TabIndex = 9;
+			this.CustomerListSaveBtn.Text = "Save";
+			this.CustomerListSaveBtn.UseVisualStyleBackColor = true;
+			// 
+			// CustomerListEditBtn
+			// 
+			this.CustomerListEditBtn.Location = new System.Drawing.Point(805, 180);
+			this.CustomerListEditBtn.Name = "CustomerListEditBtn";
+			this.CustomerListEditBtn.Size = new System.Drawing.Size(100, 30);
+			this.CustomerListEditBtn.TabIndex = 8;
+			this.CustomerListEditBtn.Text = "Edit";
+			this.CustomerListEditBtn.UseVisualStyleBackColor = true;
+			// 
+			// CustomerListClearFieldsBtn
+			// 
+			this.CustomerListClearFieldsBtn.Location = new System.Drawing.Point(630, 180);
+			this.CustomerListClearFieldsBtn.Name = "CustomerListClearFieldsBtn";
+			this.CustomerListClearFieldsBtn.Size = new System.Drawing.Size(169, 30);
+			this.CustomerListClearFieldsBtn.TabIndex = 7;
+			this.CustomerListClearFieldsBtn.Text = "Clear Selected Fields";
+			this.CustomerListClearFieldsBtn.UseVisualStyleBackColor = true;
+			// 
+			// CustomerListClearBtn
+			// 
+			this.CustomerListClearBtn.Location = new System.Drawing.Point(524, 180);
+			this.CustomerListClearBtn.Name = "CustomerListClearBtn";
+			this.CustomerListClearBtn.Size = new System.Drawing.Size(100, 30);
+			this.CustomerListClearBtn.TabIndex = 6;
+			this.CustomerListClearBtn.Text = "Clear";
+			this.CustomerListClearBtn.UseVisualStyleBackColor = true;
+			this.CustomerListClearBtn.Click += new System.EventHandler(this.CustomerListClearBtn_Click);
 			// 
 			// HistoryGroupBox
 			// 
+			this.HistoryGroupBox.Controls.Add(this.InvoiceHistorySaveBtn);
 			this.HistoryGroupBox.Controls.Add(this.InvoiceHistoryDataGrid);
-			this.HistoryGroupBox.Location = new System.Drawing.Point(19, 499);
+			this.HistoryGroupBox.Controls.Add(this.InvoiceHistoryEditBtn);
+			this.HistoryGroupBox.Controls.Add(this.InvoiceHistoryClearFieldsBtn);
+			this.HistoryGroupBox.Controls.Add(this.InvoiceHistoryClearBtn);
+			this.HistoryGroupBox.Location = new System.Drawing.Point(19, 488);
 			this.HistoryGroupBox.Name = "HistoryGroupBox";
-			this.HistoryGroupBox.Size = new System.Drawing.Size(1025, 237);
+			this.HistoryGroupBox.Size = new System.Drawing.Size(1025, 214);
 			this.HistoryGroupBox.TabIndex = 3;
 			this.HistoryGroupBox.TabStop = false;
 			this.HistoryGroupBox.Text = "Invoice History";
+			this.HistoryGroupBox.Enter += new System.EventHandler(this.InvoiceHistoryGroupBox_Enter);
+			// 
+			// InvoiceHistorySaveBtn
+			// 
+			this.InvoiceHistorySaveBtn.Location = new System.Drawing.Point(912, 172);
+			this.InvoiceHistorySaveBtn.Name = "InvoiceHistorySaveBtn";
+			this.InvoiceHistorySaveBtn.Size = new System.Drawing.Size(100, 30);
+			this.InvoiceHistorySaveBtn.TabIndex = 13;
+			this.InvoiceHistorySaveBtn.Text = "Save";
+			this.InvoiceHistorySaveBtn.UseVisualStyleBackColor = true;
+			this.InvoiceHistorySaveBtn.Click += new System.EventHandler(this.InvoiceHistorySaveBtn_Click);
 			// 
 			// InvoiceHistoryDataGrid
 			// 
@@ -425,9 +512,11 @@
             this.invoiceNumberDataGridViewTextBoxColumn1,
             this.dueDateDataGridViewTextBoxColumn1,
             this.deliveryCostDataGridViewTextBoxColumn1,
-            this.discountAmtDataGridViewTextBoxColumn1});
-			this.InvoiceHistoryDataGrid.DataSource = this.invoiceBindingSource;
-			this.InvoiceHistoryDataGrid.Location = new System.Drawing.Point(7, 24);
+            this.discountAmtDataGridViewTextBoxColumn1,
+            this.orderNumberDataGridViewTextBoxColumn1,
+            this.productNumberDataGridViewTextBoxColumn1});
+			this.InvoiceHistoryDataGrid.DataSource = this.invoiceBindingSource2;
+			this.InvoiceHistoryDataGrid.Location = new System.Drawing.Point(15, 24);
 			this.InvoiceHistoryDataGrid.Name = "InvoiceHistoryDataGrid";
 			this.InvoiceHistoryDataGrid.Size = new System.Drawing.Size(997, 142);
 			this.InvoiceHistoryDataGrid.TabIndex = 0;
@@ -437,6 +526,7 @@
 			this.invoiceNumberDataGridViewTextBoxColumn1.DataPropertyName = "InvoiceNumber";
 			this.invoiceNumberDataGridViewTextBoxColumn1.HeaderText = "InvoiceNumber";
 			this.invoiceNumberDataGridViewTextBoxColumn1.Name = "invoiceNumberDataGridViewTextBoxColumn1";
+			this.invoiceNumberDataGridViewTextBoxColumn1.ReadOnly = true;
 			// 
 			// dueDateDataGridViewTextBoxColumn1
 			// 
@@ -456,81 +546,175 @@
 			this.discountAmtDataGridViewTextBoxColumn1.HeaderText = "DiscountAmt";
 			this.discountAmtDataGridViewTextBoxColumn1.Name = "discountAmtDataGridViewTextBoxColumn1";
 			// 
-			// invoiceBindingSource
+			// orderNumberDataGridViewTextBoxColumn1
 			// 
-			this.invoiceBindingSource.DataMember = "Invoice";
-			this.invoiceBindingSource.DataSource = this.miniBatchDataSet;
+			this.orderNumberDataGridViewTextBoxColumn1.DataPropertyName = "OrderNumber";
+			this.orderNumberDataGridViewTextBoxColumn1.HeaderText = "OrderNumber";
+			this.orderNumberDataGridViewTextBoxColumn1.Name = "orderNumberDataGridViewTextBoxColumn1";
+			// 
+			// productNumberDataGridViewTextBoxColumn1
+			// 
+			this.productNumberDataGridViewTextBoxColumn1.DataPropertyName = "ProductNumber";
+			this.productNumberDataGridViewTextBoxColumn1.HeaderText = "ProductNumber";
+			this.productNumberDataGridViewTextBoxColumn1.Name = "productNumberDataGridViewTextBoxColumn1";
+			// 
+			// invoiceBindingSource2
+			// 
+			this.invoiceBindingSource2.DataMember = "Invoice";
+			this.invoiceBindingSource2.DataSource = this.miniBatchDataSetNew;
+			// 
+			// InvoiceHistoryEditBtn
+			// 
+			this.InvoiceHistoryEditBtn.Location = new System.Drawing.Point(806, 172);
+			this.InvoiceHistoryEditBtn.Name = "InvoiceHistoryEditBtn";
+			this.InvoiceHistoryEditBtn.Size = new System.Drawing.Size(100, 30);
+			this.InvoiceHistoryEditBtn.TabIndex = 12;
+			this.InvoiceHistoryEditBtn.Text = "Edit";
+			this.InvoiceHistoryEditBtn.UseVisualStyleBackColor = true;
+			this.InvoiceHistoryEditBtn.Click += new System.EventHandler(this.InvoiceHistoryEditBtn_Click);
+			// 
+			// InvoiceHistoryClearFieldsBtn
+			// 
+			this.InvoiceHistoryClearFieldsBtn.Location = new System.Drawing.Point(631, 172);
+			this.InvoiceHistoryClearFieldsBtn.Name = "InvoiceHistoryClearFieldsBtn";
+			this.InvoiceHistoryClearFieldsBtn.Size = new System.Drawing.Size(169, 30);
+			this.InvoiceHistoryClearFieldsBtn.TabIndex = 11;
+			this.InvoiceHistoryClearFieldsBtn.Text = "Clear Selected Fields";
+			this.InvoiceHistoryClearFieldsBtn.UseVisualStyleBackColor = true;
+			this.InvoiceHistoryClearFieldsBtn.Click += new System.EventHandler(this.InvoiceHistoryClearFieldsBtn_Click);
+			// 
+			// InvoiceHistoryClearBtn
+			// 
+			this.InvoiceHistoryClearBtn.Location = new System.Drawing.Point(525, 172);
+			this.InvoiceHistoryClearBtn.Name = "InvoiceHistoryClearBtn";
+			this.InvoiceHistoryClearBtn.Size = new System.Drawing.Size(100, 30);
+			this.InvoiceHistoryClearBtn.TabIndex = 10;
+			this.InvoiceHistoryClearBtn.Text = "Clear";
+			this.InvoiceHistoryClearBtn.UseVisualStyleBackColor = true;
+			this.InvoiceHistoryClearBtn.Click += new System.EventHandler(this.InvoiceHistoryClearBtn_Click);
 			// 
 			// ProductsOnOrderGroupBox
 			// 
+			this.ProductsOnOrderGroupBox.Controls.Add(this.ProductsSaveBtn);
 			this.ProductsOnOrderGroupBox.Controls.Add(this.ProductsOnOrderDataGrid);
-			this.ProductsOnOrderGroupBox.Location = new System.Drawing.Point(19, 741);
+			this.ProductsOnOrderGroupBox.Controls.Add(this.ProductsEditBtn);
+			this.ProductsOnOrderGroupBox.Controls.Add(this.ProductsClearFieldsBtn);
+			this.ProductsOnOrderGroupBox.Controls.Add(this.ProductsClearBtn);
+			this.ProductsOnOrderGroupBox.Location = new System.Drawing.Point(19, 708);
 			this.ProductsOnOrderGroupBox.Name = "ProductsOnOrderGroupBox";
-			this.ProductsOnOrderGroupBox.Size = new System.Drawing.Size(1025, 235);
+			this.ProductsOnOrderGroupBox.Size = new System.Drawing.Size(1025, 227);
 			this.ProductsOnOrderGroupBox.TabIndex = 4;
 			this.ProductsOnOrderGroupBox.TabStop = false;
 			this.ProductsOnOrderGroupBox.Text = "Products On Order";
+			// 
+			// ProductsSaveBtn
+			// 
+			this.ProductsSaveBtn.Location = new System.Drawing.Point(912, 188);
+			this.ProductsSaveBtn.Name = "ProductsSaveBtn";
+			this.ProductsSaveBtn.Size = new System.Drawing.Size(100, 30);
+			this.ProductsSaveBtn.TabIndex = 17;
+			this.ProductsSaveBtn.Text = "Save";
+			this.ProductsSaveBtn.UseVisualStyleBackColor = true;
 			// 
 			// ProductsOnOrderDataGrid
 			// 
 			this.ProductsOnOrderDataGrid.AutoGenerateColumns = false;
 			this.ProductsOnOrderDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.ProductsOnOrderDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.itemCodeDataGridViewTextBoxColumn,
+            this.productDescriptionDataGridViewTextBoxColumn,
+            this.qtyDataGridViewTextBoxColumn,
+            this.valueDataGridViewTextBoxColumn,
             this.productNumberDataGridViewTextBoxColumn,
             this.reOrderQuantityDataGridViewTextBoxColumn,
             this.unitOfMeassureDataGridViewTextBoxColumn,
-            this.productDescriptionDataGridViewTextBoxColumn,
             this.sellPriceDataGridViewTextBoxColumn});
-			this.ProductsOnOrderDataGrid.DataSource = this.productBindingSource;
-			this.ProductsOnOrderDataGrid.Location = new System.Drawing.Point(3, 20);
+			this.ProductsOnOrderDataGrid.DataSource = this.productBindingSource1;
+			this.ProductsOnOrderDataGrid.Location = new System.Drawing.Point(11, 20);
 			this.ProductsOnOrderDataGrid.Name = "ProductsOnOrderDataGrid";
 			this.ProductsOnOrderDataGrid.Size = new System.Drawing.Size(1001, 162);
 			this.ProductsOnOrderDataGrid.TabIndex = 0;
 			// 
-			// productNumberDataGridViewTextBoxColumn
+			// itemCodeDataGridViewTextBoxColumn
 			// 
-			this.productNumberDataGridViewTextBoxColumn.DataPropertyName = "ProductNumber";
-			this.productNumberDataGridViewTextBoxColumn.HeaderText = "ProductNumber";
-			this.productNumberDataGridViewTextBoxColumn.MinimumWidth = 150;
-			this.productNumberDataGridViewTextBoxColumn.Name = "productNumberDataGridViewTextBoxColumn";
-			this.productNumberDataGridViewTextBoxColumn.Width = 150;
-			// 
-			// reOrderQuantityDataGridViewTextBoxColumn
-			// 
-			this.reOrderQuantityDataGridViewTextBoxColumn.DataPropertyName = "ReOrderQuantity";
-			this.reOrderQuantityDataGridViewTextBoxColumn.HeaderText = "ReOrderQuantity";
-			this.reOrderQuantityDataGridViewTextBoxColumn.MinimumWidth = 150;
-			this.reOrderQuantityDataGridViewTextBoxColumn.Name = "reOrderQuantityDataGridViewTextBoxColumn";
-			this.reOrderQuantityDataGridViewTextBoxColumn.Width = 150;
-			// 
-			// unitOfMeassureDataGridViewTextBoxColumn
-			// 
-			this.unitOfMeassureDataGridViewTextBoxColumn.DataPropertyName = "UnitOfMeassure";
-			this.unitOfMeassureDataGridViewTextBoxColumn.HeaderText = "UnitOfMeassure";
-			this.unitOfMeassureDataGridViewTextBoxColumn.MinimumWidth = 150;
-			this.unitOfMeassureDataGridViewTextBoxColumn.Name = "unitOfMeassureDataGridViewTextBoxColumn";
-			this.unitOfMeassureDataGridViewTextBoxColumn.Width = 150;
+			this.itemCodeDataGridViewTextBoxColumn.DataPropertyName = "ItemCode";
+			this.itemCodeDataGridViewTextBoxColumn.HeaderText = "ItemCode";
+			this.itemCodeDataGridViewTextBoxColumn.Name = "itemCodeDataGridViewTextBoxColumn";
 			// 
 			// productDescriptionDataGridViewTextBoxColumn
 			// 
 			this.productDescriptionDataGridViewTextBoxColumn.DataPropertyName = "ProductDescription";
 			this.productDescriptionDataGridViewTextBoxColumn.HeaderText = "ProductDescription";
-			this.productDescriptionDataGridViewTextBoxColumn.MinimumWidth = 150;
 			this.productDescriptionDataGridViewTextBoxColumn.Name = "productDescriptionDataGridViewTextBoxColumn";
-			this.productDescriptionDataGridViewTextBoxColumn.Width = 150;
+			// 
+			// qtyDataGridViewTextBoxColumn
+			// 
+			this.qtyDataGridViewTextBoxColumn.DataPropertyName = "Qty";
+			this.qtyDataGridViewTextBoxColumn.HeaderText = "Qty";
+			this.qtyDataGridViewTextBoxColumn.Name = "qtyDataGridViewTextBoxColumn";
+			// 
+			// valueDataGridViewTextBoxColumn
+			// 
+			this.valueDataGridViewTextBoxColumn.DataPropertyName = "Value";
+			this.valueDataGridViewTextBoxColumn.HeaderText = "Value";
+			this.valueDataGridViewTextBoxColumn.Name = "valueDataGridViewTextBoxColumn";
+			// 
+			// productNumberDataGridViewTextBoxColumn
+			// 
+			this.productNumberDataGridViewTextBoxColumn.DataPropertyName = "ProductNumber";
+			this.productNumberDataGridViewTextBoxColumn.HeaderText = "ProductNumber";
+			this.productNumberDataGridViewTextBoxColumn.Name = "productNumberDataGridViewTextBoxColumn";
+			this.productNumberDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// reOrderQuantityDataGridViewTextBoxColumn
+			// 
+			this.reOrderQuantityDataGridViewTextBoxColumn.DataPropertyName = "ReOrderQuantity";
+			this.reOrderQuantityDataGridViewTextBoxColumn.HeaderText = "ReOrderQuantity";
+			this.reOrderQuantityDataGridViewTextBoxColumn.Name = "reOrderQuantityDataGridViewTextBoxColumn";
+			// 
+			// unitOfMeassureDataGridViewTextBoxColumn
+			// 
+			this.unitOfMeassureDataGridViewTextBoxColumn.DataPropertyName = "UnitOfMeassure";
+			this.unitOfMeassureDataGridViewTextBoxColumn.HeaderText = "UnitOfMeassure";
+			this.unitOfMeassureDataGridViewTextBoxColumn.Name = "unitOfMeassureDataGridViewTextBoxColumn";
 			// 
 			// sellPriceDataGridViewTextBoxColumn
 			// 
 			this.sellPriceDataGridViewTextBoxColumn.DataPropertyName = "SellPrice";
 			this.sellPriceDataGridViewTextBoxColumn.HeaderText = "SellPrice";
-			this.sellPriceDataGridViewTextBoxColumn.MinimumWidth = 150;
 			this.sellPriceDataGridViewTextBoxColumn.Name = "sellPriceDataGridViewTextBoxColumn";
-			this.sellPriceDataGridViewTextBoxColumn.Width = 150;
 			// 
-			// productBindingSource
+			// productBindingSource1
 			// 
-			this.productBindingSource.DataMember = "Product";
-			this.productBindingSource.DataSource = this.miniBatchDataSetBindingSource;
+			this.productBindingSource1.DataMember = "Product";
+			this.productBindingSource1.DataSource = this.miniBatchDataSetNew;
+			// 
+			// ProductsEditBtn
+			// 
+			this.ProductsEditBtn.Location = new System.Drawing.Point(806, 188);
+			this.ProductsEditBtn.Name = "ProductsEditBtn";
+			this.ProductsEditBtn.Size = new System.Drawing.Size(100, 30);
+			this.ProductsEditBtn.TabIndex = 16;
+			this.ProductsEditBtn.Text = "Edit";
+			this.ProductsEditBtn.UseVisualStyleBackColor = true;
+			// 
+			// ProductsClearFieldsBtn
+			// 
+			this.ProductsClearFieldsBtn.Location = new System.Drawing.Point(631, 188);
+			this.ProductsClearFieldsBtn.Name = "ProductsClearFieldsBtn";
+			this.ProductsClearFieldsBtn.Size = new System.Drawing.Size(169, 30);
+			this.ProductsClearFieldsBtn.TabIndex = 15;
+			this.ProductsClearFieldsBtn.Text = "Clear Selected Fields";
+			this.ProductsClearFieldsBtn.UseVisualStyleBackColor = true;
+			// 
+			// ProductsClearBtn
+			// 
+			this.ProductsClearBtn.Location = new System.Drawing.Point(525, 188);
+			this.ProductsClearBtn.Name = "ProductsClearBtn";
+			this.ProductsClearBtn.Size = new System.Drawing.Size(100, 30);
+			this.ProductsClearBtn.TabIndex = 14;
+			this.ProductsClearBtn.Text = "Clear";
+			this.ProductsClearBtn.UseVisualStyleBackColor = true;
 			// 
 			// invoiceNumberDataGridViewTextBoxColumn
 			// 
@@ -564,42 +748,17 @@
 			this.discountAmtDataGridViewTextBoxColumn.Name = "discountAmtDataGridViewTextBoxColumn";
 			this.discountAmtDataGridViewTextBoxColumn.Width = 150;
 			// 
-			// invoiceTableAdapter
-			// 
-			this.invoiceTableAdapter.ClearBeforeFill = true;
-			// 
-			// tableAdapterManager1
-			// 
-			this.tableAdapterManager1.addressTableAdapter = null;
-			this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-			this.tableAdapterManager1.CustomerTableAdapter = this.customerTableAdapter;
-			this.tableAdapterManager1.InvoiceTableAdapter = this.invoiceTableAdapter;
-			this.tableAdapterManager1.OrderTableAdapter = null;
-			this.tableAdapterManager1.ProductTableAdapter = this.productTableAdapter;
-			this.tableAdapterManager1.UpdateOrder = MiniBatchConreteDelivery.MiniBatchDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-			// 
-			// customerTableAdapter
-			// 
-			this.customerTableAdapter.ClearBeforeFill = true;
-			// 
-			// productTableAdapter
-			// 
-			this.productTableAdapter.ClearBeforeFill = true;
-			// 
-			// customerBindingSource
-			// 
-			this.customerBindingSource.DataMember = "Customer";
-			this.customerBindingSource.DataSource = this.miniBatchDataSet;
-			// 
 			// CreateOrderInvoiceGroupBox
 			// 
 			this.CreateOrderInvoiceGroupBox.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.CreateOrderInvoiceGroupBox.Controls.Add(this.listBox1);
+			this.CreateOrderInvoiceGroupBox.Controls.Add(this.Creation_ProductsPurchasedLabel);
 			this.CreateOrderInvoiceGroupBox.Controls.Add(this.InvoiceGroupBox);
 			this.CreateOrderInvoiceGroupBox.Controls.Add(this.CustomerGroupBox2);
 			this.CreateOrderInvoiceGroupBox.Controls.Add(this.OrderInfoGroupBox);
-			this.CreateOrderInvoiceGroupBox.Location = new System.Drawing.Point(19, 982);
+			this.CreateOrderInvoiceGroupBox.Location = new System.Drawing.Point(20, 941);
 			this.CreateOrderInvoiceGroupBox.Name = "CreateOrderInvoiceGroupBox";
-			this.CreateOrderInvoiceGroupBox.Size = new System.Drawing.Size(1025, 199);
+			this.CreateOrderInvoiceGroupBox.Size = new System.Drawing.Size(1025, 284);
 			this.CreateOrderInvoiceGroupBox.TabIndex = 5;
 			this.CreateOrderInvoiceGroupBox.TabStop = false;
 			this.CreateOrderInvoiceGroupBox.Text = "Create Order & Invoice";
@@ -614,9 +773,9 @@
 			this.InvoiceGroupBox.Controls.Add(this.Creation_DueDateLabel);
 			this.InvoiceGroupBox.Controls.Add(this.Creation_ProductNumberLabel);
 			this.InvoiceGroupBox.Controls.Add(this.CreationProductNumberDropdown);
-			this.InvoiceGroupBox.Location = new System.Drawing.Point(585, 24);
+			this.InvoiceGroupBox.Location = new System.Drawing.Point(688, 24);
 			this.InvoiceGroupBox.Name = "InvoiceGroupBox";
-			this.InvoiceGroupBox.Size = new System.Drawing.Size(429, 152);
+			this.InvoiceGroupBox.Size = new System.Drawing.Size(325, 141);
 			this.InvoiceGroupBox.TabIndex = 2;
 			this.InvoiceGroupBox.TabStop = false;
 			this.InvoiceGroupBox.Text = "Invoice";
@@ -630,7 +789,7 @@
             "product3"});
 			this.Creation_InvoiceNumberComboBox.Location = new System.Drawing.Point(134, 94);
 			this.Creation_InvoiceNumberComboBox.Name = "Creation_InvoiceNumberComboBox";
-			this.Creation_InvoiceNumberComboBox.Size = new System.Drawing.Size(280, 25);
+			this.Creation_InvoiceNumberComboBox.Size = new System.Drawing.Size(171, 25);
 			this.Creation_InvoiceNumberComboBox.TabIndex = 7;
 			// 
 			// Creation_DateTimePicker
@@ -640,7 +799,7 @@
 			this.Creation_DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
 			this.Creation_DateTimePicker.Location = new System.Drawing.Point(134, 57);
 			this.Creation_DateTimePicker.Name = "Creation_DateTimePicker";
-			this.Creation_DateTimePicker.Size = new System.Drawing.Size(280, 25);
+			this.Creation_DateTimePicker.Size = new System.Drawing.Size(171, 25);
 			this.Creation_DateTimePicker.TabIndex = 6;
 			// 
 			// Creation_InvoiceNumberLabel
@@ -675,14 +834,12 @@
 			// 
 			// CreationProductNumberDropdown
 			// 
+			this.CreationProductNumberDropdown.DataSource = this.productBindingSource1;
+			this.CreationProductNumberDropdown.DisplayMember = "ProductNumber";
 			this.CreationProductNumberDropdown.FormattingEnabled = true;
-			this.CreationProductNumberDropdown.Items.AddRange(new object[] {
-            "product1",
-            "product2",
-            "product3"});
 			this.CreationProductNumberDropdown.Location = new System.Drawing.Point(134, 23);
 			this.CreationProductNumberDropdown.Name = "CreationProductNumberDropdown";
-			this.CreationProductNumberDropdown.Size = new System.Drawing.Size(280, 25);
+			this.CreationProductNumberDropdown.Size = new System.Drawing.Size(171, 25);
 			this.CreationProductNumberDropdown.TabIndex = 3;
 			this.CreationProductNumberDropdown.SelectedIndexChanged += new System.EventHandler(this.CreationProductNumberDropdown_SelectedIndexChanged);
 			// 
@@ -694,9 +851,9 @@
 			this.CustomerGroupBox2.Controls.Add(this.Creation_DeliveryCostLabel);
 			this.CustomerGroupBox2.Controls.Add(this.textBox1);
 			this.CustomerGroupBox2.Controls.Add(this.Creation_CustomerNumberLabel);
-			this.CustomerGroupBox2.Location = new System.Drawing.Point(303, 24);
+			this.CustomerGroupBox2.Location = new System.Drawing.Point(348, 24);
 			this.CustomerGroupBox2.Name = "CustomerGroupBox2";
-			this.CustomerGroupBox2.Size = new System.Drawing.Size(263, 152);
+			this.CustomerGroupBox2.Size = new System.Drawing.Size(325, 141);
 			this.CustomerGroupBox2.TabIndex = 1;
 			this.CustomerGroupBox2.TabStop = false;
 			this.CustomerGroupBox2.Text = "Customer";
@@ -705,13 +862,14 @@
 			// 
 			this.Creation_DiscountAmtTextBox.Location = new System.Drawing.Point(136, 102);
 			this.Creation_DiscountAmtTextBox.Name = "Creation_DiscountAmtTextBox";
-			this.Creation_DiscountAmtTextBox.Size = new System.Drawing.Size(102, 25);
+			this.Creation_DiscountAmtTextBox.Size = new System.Drawing.Size(172, 25);
 			this.Creation_DiscountAmtTextBox.TabIndex = 5;
+			this.Creation_DiscountAmtTextBox.Text = "0";
 			// 
 			// Creation_DiscountAmtLabel
 			// 
 			this.Creation_DiscountAmtLabel.AutoSize = true;
-			this.Creation_DiscountAmtLabel.Location = new System.Drawing.Point(35, 105);
+			this.Creation_DiscountAmtLabel.Location = new System.Drawing.Point(31, 105);
 			this.Creation_DiscountAmtLabel.Name = "Creation_DiscountAmtLabel";
 			this.Creation_DiscountAmtLabel.Size = new System.Drawing.Size(99, 17);
 			this.Creation_DiscountAmtLabel.TabIndex = 4;
@@ -719,15 +877,17 @@
 			// 
 			// Creation_DeliveryCostTextBox
 			// 
-			this.Creation_DeliveryCostTextBox.Location = new System.Drawing.Point(136, 69);
+			this.Creation_DeliveryCostTextBox.Location = new System.Drawing.Point(136, 64);
 			this.Creation_DeliveryCostTextBox.Name = "Creation_DeliveryCostTextBox";
-			this.Creation_DeliveryCostTextBox.Size = new System.Drawing.Size(102, 25);
+			this.Creation_DeliveryCostTextBox.Size = new System.Drawing.Size(172, 25);
 			this.Creation_DeliveryCostTextBox.TabIndex = 3;
+			this.Creation_DeliveryCostTextBox.Text = "0";
+			this.Creation_DeliveryCostTextBox.TextChanged += new System.EventHandler(this.Creation_DeliveryCostTextBox_TextChanged);
 			// 
 			// Creation_DeliveryCostLabel
 			// 
 			this.Creation_DeliveryCostLabel.AutoSize = true;
-			this.Creation_DeliveryCostLabel.Location = new System.Drawing.Point(31, 72);
+			this.Creation_DeliveryCostLabel.Location = new System.Drawing.Point(33, 72);
 			this.Creation_DeliveryCostLabel.Name = "Creation_DeliveryCostLabel";
 			this.Creation_DeliveryCostLabel.Size = new System.Drawing.Size(99, 17);
 			this.Creation_DeliveryCostLabel.TabIndex = 2;
@@ -737,7 +897,7 @@
 			// 
 			this.textBox1.Location = new System.Drawing.Point(136, 30);
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(102, 25);
+			this.textBox1.Size = new System.Drawing.Size(172, 25);
 			this.textBox1.TabIndex = 1;
 			// 
 			// Creation_CustomerNumberLabel
@@ -751,15 +911,17 @@
 			// 
 			// OrderInfoGroupBox
 			// 
+			this.OrderInfoGroupBox.Controls.Add(this.PmtMtdComboBox);
+			this.OrderInfoGroupBox.Controls.Add(this.Creation_PmtMtdLabel);
 			this.OrderInfoGroupBox.Controls.Add(this.Creation_OrderDatePIcker);
 			this.OrderInfoGroupBox.Controls.Add(this.Creation_TimePickerBox);
 			this.OrderInfoGroupBox.Controls.Add(this.Creation_OrderNumberTextBox);
 			this.OrderInfoGroupBox.Controls.Add(this.Creation_TimeLabel);
 			this.OrderInfoGroupBox.Controls.Add(this.Creation_OrderNumberLabel);
 			this.OrderInfoGroupBox.Controls.Add(this.Creation_OrderDateLabel);
-			this.OrderInfoGroupBox.Location = new System.Drawing.Point(4, 23);
+			this.OrderInfoGroupBox.Location = new System.Drawing.Point(8, 24);
 			this.OrderInfoGroupBox.Name = "OrderInfoGroupBox";
-			this.OrderInfoGroupBox.Size = new System.Drawing.Size(289, 152);
+			this.OrderInfoGroupBox.Size = new System.Drawing.Size(325, 228);
 			this.OrderInfoGroupBox.TabIndex = 0;
 			this.OrderInfoGroupBox.TabStop = false;
 			this.OrderInfoGroupBox.Text = "Order Info";
@@ -771,7 +933,7 @@
 			this.Creation_OrderDatePIcker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
 			this.Creation_OrderDatePIcker.Location = new System.Drawing.Point(121, 33);
 			this.Creation_OrderDatePIcker.Name = "Creation_OrderDatePIcker";
-			this.Creation_OrderDatePIcker.Size = new System.Drawing.Size(156, 25);
+			this.Creation_OrderDatePIcker.Size = new System.Drawing.Size(189, 25);
 			this.Creation_OrderDatePIcker.TabIndex = 5;
 			// 
 			// Creation_TimePickerBox
@@ -779,26 +941,27 @@
 			this.Creation_TimePickerBox.CalendarFont = new System.Drawing.Font("Arial", 11.25F);
 			this.Creation_TimePickerBox.Font = new System.Drawing.Font("Arial", 11.25F);
 			this.Creation_TimePickerBox.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-			this.Creation_TimePickerBox.Location = new System.Drawing.Point(121, 72);
+			this.Creation_TimePickerBox.Location = new System.Drawing.Point(120, 69);
 			this.Creation_TimePickerBox.Name = "Creation_TimePickerBox";
-			this.Creation_TimePickerBox.Size = new System.Drawing.Size(156, 25);
+			this.Creation_TimePickerBox.Size = new System.Drawing.Size(189, 25);
 			this.Creation_TimePickerBox.TabIndex = 6;
 			// 
 			// Creation_OrderNumberTextBox
 			// 
 			this.Creation_OrderNumberTextBox.Location = new System.Drawing.Point(121, 105);
 			this.Creation_OrderNumberTextBox.Name = "Creation_OrderNumberTextBox";
-			this.Creation_OrderNumberTextBox.Size = new System.Drawing.Size(156, 25);
+			this.Creation_OrderNumberTextBox.Size = new System.Drawing.Size(189, 25);
 			this.Creation_OrderNumberTextBox.TabIndex = 7;
 			// 
 			// Creation_TimeLabel
 			// 
 			this.Creation_TimeLabel.AutoSize = true;
-			this.Creation_TimeLabel.Location = new System.Drawing.Point(74, 76);
+			this.Creation_TimeLabel.Location = new System.Drawing.Point(75, 72);
 			this.Creation_TimeLabel.Name = "Creation_TimeLabel";
 			this.Creation_TimeLabel.Size = new System.Drawing.Size(44, 17);
 			this.Creation_TimeLabel.TabIndex = 2;
 			this.Creation_TimeLabel.Text = "Time:";
+			this.Creation_TimeLabel.Click += new System.EventHandler(this.Creation_TimeLabel_Click);
 			// 
 			// Creation_OrderNumberLabel
 			// 
@@ -818,16 +981,88 @@
 			this.Creation_OrderDateLabel.TabIndex = 0;
 			this.Creation_OrderDateLabel.Text = "Order Date:";
 			// 
-			// customerBindingSource1
+			// productTableAdapter1
 			// 
-			this.customerBindingSource1.DataMember = "Customer";
-			this.customerBindingSource1.DataSource = this.miniBatchDataSetBindingSource;
+			this.productTableAdapter1.ClearBeforeFill = true;
+			// 
+			// tableAdapterManager
+			// 
+			this.tableAdapterManager.addressTableAdapter = null;
+			this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+			this.tableAdapterManager.CustomerTableAdapter = null;
+			this.tableAdapterManager.InventoryTableAdapter = null;
+			this.tableAdapterManager.InvoiceTableAdapter = this.invoiceTableAdapter1;
+			this.tableAdapterManager.OrdersTableAdapter = null;
+			this.tableAdapterManager.ProductTableAdapter = this.productTableAdapter1;
+			this.tableAdapterManager.UpdateOrder = MiniBatchConreteDelivery.MiniBatchDataSetNewTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+			// 
+			// invoiceTableAdapter1
+			// 
+			this.invoiceTableAdapter1.ClearBeforeFill = true;
+			// 
+			// invoiceBindingSource1
+			// 
+			this.invoiceBindingSource1.DataMember = "Invoice";
+			this.invoiceBindingSource1.DataSource = this.miniBatchDataSetNew;
+			// 
+			// customerTableAdapter1
+			// 
+			this.customerTableAdapter1.ClearBeforeFill = true;
+			// 
+			// PmtMtdComboBox
+			// 
+			this.PmtMtdComboBox.FormattingEnabled = true;
+			this.PmtMtdComboBox.Items.AddRange(new object[] {
+            "Visa",
+            "Mastercard",
+            "Debit",
+            "Cash"});
+			this.PmtMtdComboBox.Location = new System.Drawing.Point(135, 151);
+			this.PmtMtdComboBox.Name = "PmtMtdComboBox";
+			this.PmtMtdComboBox.Size = new System.Drawing.Size(174, 25);
+			this.PmtMtdComboBox.TabIndex = 3;
+			this.PmtMtdComboBox.Text = "Visa";
+			// 
+			// Creation_PmtMtdLabel
+			// 
+			this.Creation_PmtMtdLabel.AutoSize = true;
+			this.Creation_PmtMtdLabel.Location = new System.Drawing.Point(8, 154);
+			this.Creation_PmtMtdLabel.Name = "Creation_PmtMtdLabel";
+			this.Creation_PmtMtdLabel.Size = new System.Drawing.Size(121, 17);
+			this.Creation_PmtMtdLabel.TabIndex = 8;
+			this.Creation_PmtMtdLabel.Text = "Payment Method:";
+			// 
+			// Creation_ProductsPurchasedLabel
+			// 
+			this.Creation_ProductsPurchasedLabel.AutoSize = true;
+			this.Creation_ProductsPurchasedLabel.Location = new System.Drawing.Point(353, 178);
+			this.Creation_ProductsPurchasedLabel.Name = "Creation_ProductsPurchasedLabel";
+			this.Creation_ProductsPurchasedLabel.Size = new System.Drawing.Size(146, 17);
+			this.Creation_ProductsPurchasedLabel.TabIndex = 3;
+			this.Creation_ProductsPurchasedLabel.Text = "Products Purchased:";
+			// 
+			// listBox1
+			// 
+			this.listBox1.DataSource = this.productBindingSource2;
+			this.listBox1.DisplayMember = "ProductDescription";
+			this.listBox1.FormattingEnabled = true;
+			this.listBox1.ItemHeight = 17;
+			this.listBox1.Location = new System.Drawing.Point(504, 175);
+			this.listBox1.Name = "listBox1";
+			this.listBox1.Size = new System.Drawing.Size(261, 89);
+			this.listBox1.TabIndex = 4;
+			this.listBox1.ValueMember = "ProductDescription";
+			// 
+			// productBindingSource2
+			// 
+			this.productBindingSource2.DataMember = "Product";
+			this.productBindingSource2.DataSource = this.miniBatchDataSetNew;
 			// 
 			// TransactionSystemForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1057, 1167);
+			this.ClientSize = new System.Drawing.Size(1057, 1237);
 			this.Controls.Add(this.CreateOrderInvoiceGroupBox);
 			this.Controls.Add(this.ProductsOnOrderGroupBox);
 			this.Controls.Add(this.HistoryGroupBox);
@@ -852,25 +1087,28 @@
 			this.CustomerGroupBox.ResumeLayout(false);
 			this.CustomerGroupBox.PerformLayout();
 			this.CustomerListGroupBox.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.CustomerListDataGrid)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.miniBatchDataSetBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.miniBatchDataSet)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.miniBatchDataSetNew)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
 			this.HistoryGroupBox.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.InvoiceHistoryDataGrid)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource2)).EndInit();
 			this.ProductsOnOrderGroupBox.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.ProductsOnOrderDataGrid)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
 			this.CreateOrderInvoiceGroupBox.ResumeLayout(false);
+			this.CreateOrderInvoiceGroupBox.PerformLayout();
 			this.InvoiceGroupBox.ResumeLayout(false);
 			this.InvoiceGroupBox.PerformLayout();
 			this.CustomerGroupBox2.ResumeLayout(false);
 			this.CustomerGroupBox2.PerformLayout();
 			this.OrderInfoGroupBox.ResumeLayout(false);
 			this.OrderInfoGroupBox.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -901,22 +1139,7 @@
 		private System.Windows.Forms.GroupBox CustomerListGroupBox;
 		private System.Windows.Forms.GroupBox HistoryGroupBox;
 		private System.Windows.Forms.GroupBox ProductsOnOrderGroupBox;
-		private System.Windows.Forms.DataGridView CustomerListDataGrid;
-		private MiniBatchDataSet miniBatchDataSet;
-		private System.Windows.Forms.BindingSource invoiceBindingSource;
-		private MiniBatchDataSetTableAdapters.InvoiceTableAdapter invoiceTableAdapter;
-		private MiniBatchDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
-		private MiniBatchDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
-		private System.Windows.Forms.BindingSource customerBindingSource;
 		private System.Windows.Forms.DataGridView ProductsOnOrderDataGrid;
-		private System.Windows.Forms.BindingSource miniBatchDataSetBindingSource;
-		private MiniBatchDataSetTableAdapters.ProductTableAdapter productTableAdapter;
-		private System.Windows.Forms.BindingSource productBindingSource;
-		private System.Windows.Forms.DataGridViewTextBoxColumn productNumberDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn reOrderQuantityDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn unitOfMeassureDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn productDescriptionDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn sellPriceDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn invoiceNumberDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dueDateDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn deliveryCostDataGridViewTextBoxColumn;
@@ -944,16 +1167,59 @@
 		private System.Windows.Forms.Label Creation_OrderNumberLabel;
 		private System.Windows.Forms.Label Creation_OrderDateLabel;
 		private System.Windows.Forms.DateTimePicker Creation_OrderDatePIcker;
+		private System.Windows.Forms.Button CustomerListSaveBtn;
+		private System.Windows.Forms.Button CustomerListEditBtn;
+		private System.Windows.Forms.Button CustomerListClearFieldsBtn;
+		private System.Windows.Forms.Button CustomerListClearBtn;
+		private System.Windows.Forms.Button InvoiceHistorySaveBtn;
+		private System.Windows.Forms.Button InvoiceHistoryEditBtn;
+		private System.Windows.Forms.Button InvoiceHistoryClearFieldsBtn;
+		private System.Windows.Forms.Button InvoiceHistoryClearBtn;
+		private System.Windows.Forms.Button ProductsSaveBtn;
+		private System.Windows.Forms.Button ProductsEditBtn;
+		private System.Windows.Forms.Button ProductsClearFieldsBtn;
+		private System.Windows.Forms.Button ProductsClearBtn;
+		private System.Windows.Forms.BindingSource customerBindingSource;
+		private System.Windows.Forms.BindingSource invoiceBindingSource;
+		private System.Windows.Forms.BindingSource productBindingSource;
+		private MiniBatchDataSetNew miniBatchDataSetNew;
+		private System.Windows.Forms.BindingSource productBindingSource1;
+		private MiniBatchDataSetNewTableAdapters.ProductTableAdapter productTableAdapter1;
+		private MiniBatchDataSetNewTableAdapters.TableAdapterManager tableAdapterManager;
+		private System.Windows.Forms.DataGridViewTextBoxColumn itemCodeDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn productDescriptionDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn qtyDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn valueDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn productNumberDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn reOrderQuantityDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn unitOfMeassureDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn sellPriceDataGridViewTextBoxColumn;
+		private MiniBatchConreteDelivery.MiniBatchDataSetNewTableAdapters.InvoiceTableAdapter invoiceTableAdapter;
+		private MiniBatchConreteDelivery.MiniBatchDataSetNewTableAdapters.TableAdapterManager tableAdapterManager1;
+		private MiniBatchConreteDelivery.MiniBatchDataSetNewTableAdapters.CustomerTableAdapter customerTableAdapter;
+		private MiniBatchDataSetNewTableAdapters.InvoiceTableAdapter invoiceTableAdapter1;
+		private System.Windows.Forms.BindingSource invoiceBindingSource1;
+		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.BindingSource customerBindingSource1;
+		private MiniBatchDataSetNewTableAdapters.CustomerTableAdapter customerTableAdapter1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn customerNumberDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn balanceOwingDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn addressNumberDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn orderNumberDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn invoiceNumberDataGridViewTextBoxColumn1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dueDateDataGridViewTextBoxColumn1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn deliveryCostDataGridViewTextBoxColumn1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn discountAmtDataGridViewTextBoxColumn1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn customerNumberDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn balanceOwingDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
-		private System.Windows.Forms.BindingSource customerBindingSource2;
-		private System.Windows.Forms.BindingSource customerBindingSource1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn orderNumberDataGridViewTextBoxColumn1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn productNumberDataGridViewTextBoxColumn1;
+		private System.Windows.Forms.BindingSource invoiceBindingSource2;
+		private System.Windows.Forms.ComboBox PmtMtdComboBox;
+		private System.Windows.Forms.Label Creation_PmtMtdLabel;
+		private System.Windows.Forms.Label Creation_ProductsPurchasedLabel;
+		private System.Windows.Forms.ListBox listBox1;
+		private System.Windows.Forms.BindingSource productBindingSource2;
 	}
 }
 
