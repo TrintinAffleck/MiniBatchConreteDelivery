@@ -70,11 +70,13 @@ namespace MiniBatchConreteDelivery
 
 		private void TransactionSystemForm_Load(object sender, EventArgs e)
 		{
-			this.customerTableAdapter1.Fill(this.miniBatchDataSetNew.Customer);
-			this.productTableAdapter1.Fill(this.miniBatchDataSetNew.Product);
-			this.invoiceTableAdapter1.Fill(this.miniBatchDataSetNew.Invoice);
-		
-
+			// TODO: This line of code loads data into the 'miniBatchDataSet.Product' table. You can move, or remove it, as needed.
+			productTableAdapter.Fill(miniBatchDataSet.Product);
+			// TODO: This line of code loads data into the 'miniBatchDataSet.Invoice' table. You can move, or remove it, as needed.
+			invoiceTableAdapter.Fill(miniBatchDataSet.Invoice);
+			// TODO: This line of code loads data into the 'miniBatchDataSet.Customer' table. You can move, or remove it, as needed.
+			customerTableAdapter.Fill(miniBatchDataSet.Customer);
+			ProductsOnOrderDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
 
 		}
 
@@ -108,9 +110,14 @@ namespace MiniBatchConreteDelivery
 
 		}
 
+		private void CustomerListEditBtn_Click(object sender, EventArgs e)
+		{
+			CustomerListDataGrid.BeginEdit(false);
+		}
+
 		private void InvoiceHistoryEditBtn_Click(object sender, EventArgs e)
 		{
-			
+			InvoiceHistoryDataGrid.BeginEdit(false);
 		}
 
 		private void InvoiceHistoryClearBtn_Click(object sender, EventArgs e)
@@ -131,6 +138,11 @@ namespace MiniBatchConreteDelivery
 		private void InvoiceHistoryGroupBox_Enter(object sender, EventArgs e)
 		{
 
+		}
+
+		private void ProductListEditBtn_Click(object sender, EventArgs e)
+		{
+			ProductsOnOrderDataGrid.BeginEdit(false);
 		}
 
 		private void Creation_TimeLabel_Click(object sender, EventArgs e)
