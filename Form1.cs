@@ -72,12 +72,15 @@ namespace MiniBatchConreteDelivery
 		{
 			// TODO: This line of code loads data into the 'miniBatchDataSet.Product' table. You can move, or remove it, as needed.
 			productTableAdapter.Fill(miniBatchDataSet.Product);
+			ProductsOnOrderDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
 			// TODO: This line of code loads data into the 'miniBatchDataSet.Invoice' table. You can move, or remove it, as needed.
 			invoiceTableAdapter.Fill(miniBatchDataSet.Invoice);
+			InvoiceHistoryDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
 			// TODO: This line of code loads data into the 'miniBatchDataSet.Customer' table. You can move, or remove it, as needed.
 			customerTableAdapter.Fill(miniBatchDataSet.Customer);
-			ProductsOnOrderDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
-
+			CustomerListDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
+			ProductsOnOrderDataGrid.Columns[2].DefaultCellStyle.Format = "N2";
+			ProductsOnOrderDataGrid.Columns[6].DefaultCellStyle.Format = "N2";
 		}
 
 		private void CreationGroupBox_Enter(object sender, EventArgs e) 
@@ -112,12 +115,18 @@ namespace MiniBatchConreteDelivery
 
 		private void CustomerListEditBtn_Click(object sender, EventArgs e)
 		{
-			CustomerListDataGrid.BeginEdit(false);
+			if(CustomerListDataGrid.SelectedCells.Count > 0)
+			{
+				CustomerListDataGrid.BeginEdit(false);
+			}
 		}
 
 		private void InvoiceHistoryEditBtn_Click(object sender, EventArgs e)
 		{
-			InvoiceHistoryDataGrid.BeginEdit(false);
+			if (InvoiceHistoryDataGrid.SelectedCells.Count > 0)
+			{
+				InvoiceHistoryDataGrid.BeginEdit(false);
+			}
 		}
 
 		private void InvoiceHistoryClearBtn_Click(object sender, EventArgs e)
@@ -132,7 +141,7 @@ namespace MiniBatchConreteDelivery
 
 		private void InvoiceHistorySaveBtn_Click(object sender, EventArgs e)
 		{
-
+			
 		}
 
 		private void InvoiceHistoryGroupBox_Enter(object sender, EventArgs e)
@@ -142,8 +151,13 @@ namespace MiniBatchConreteDelivery
 
 		private void ProductListEditBtn_Click(object sender, EventArgs e)
 		{
-			ProductsOnOrderDataGrid.BeginEdit(false);
-		}
+			
+            foreach (DataGridViewCell cell in ProductsOnOrderDataGrid.SelectedCells)
+            {
+				ProductsOnOrderDataGrid.BeginEdit(false);
+				Console.WriteLine(cell.Value);
+			}
+        }
 
 		private void Creation_TimeLabel_Click(object sender, EventArgs e)
 		{
