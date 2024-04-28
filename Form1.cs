@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace MiniBatchConreteDelivery
 {
@@ -16,11 +9,12 @@ namespace MiniBatchConreteDelivery
 		public TransactionSystemForm()
 		{
 			InitializeComponent();
+			
 		}
 
 		private void HeaderLabel_Click(object sender, EventArgs e)
 		{
-			
+
 		}
 
 		private void LookUpGroupBox_Enter(object sender, EventArgs e)
@@ -42,14 +36,11 @@ namespace MiniBatchConreteDelivery
 		{
 		}
 
-		private void ProductNumberLabel_Click(object sender, EventArgs e)
-		{
 
-		}
 
 		private void SearchButton_Click(object sender, EventArgs e)
 		{
-		
+
 		}
 
 		private void ClearAllFieldsBtn1_Click(object sender, EventArgs e)
@@ -81,11 +72,12 @@ namespace MiniBatchConreteDelivery
 			CustomerListDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
 			ProductsOnOrderDataGrid.Columns[2].DefaultCellStyle.Format = "N2";
 			ProductsOnOrderDataGrid.Columns[6].DefaultCellStyle.Format = "N2";
+			
 		}
 
-		private void CreationGroupBox_Enter(object sender, EventArgs e) 
+		private void CreationGroupBox_Enter(object sender, EventArgs e)
 		{
-			
+
 		}
 
 		private void Creation_ProductNumberLabel_Click(object sender, EventArgs e)
@@ -105,17 +97,17 @@ namespace MiniBatchConreteDelivery
 
 		private void CreationProductNumberDropdown_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			
+
 		}
 
-		private void CustomerListClearBtn_Click(object sender, EventArgs e)
+		private void CustomerListCancelBtn_Click(object sender, EventArgs e)
 		{
 
 		}
 
 		private void CustomerListEditBtn_Click(object sender, EventArgs e)
 		{
-			if(CustomerListDataGrid.SelectedCells.Count > 0)
+			if (CustomerListDataGrid.SelectedCells.Count > 0)
 			{
 				CustomerListDataGrid.BeginEdit(false);
 			}
@@ -129,7 +121,7 @@ namespace MiniBatchConreteDelivery
 			}
 		}
 
-		private void InvoiceHistoryClearBtn_Click(object sender, EventArgs e)
+		private void InvoiceHistoryCancelBtn_Click(object sender, EventArgs e)
 		{
 
 		}
@@ -141,7 +133,7 @@ namespace MiniBatchConreteDelivery
 
 		private void InvoiceHistorySaveBtn_Click(object sender, EventArgs e)
 		{
-			
+
 		}
 
 		private void InvoiceHistoryGroupBox_Enter(object sender, EventArgs e)
@@ -151,13 +143,59 @@ namespace MiniBatchConreteDelivery
 
 		private void ProductListEditBtn_Click(object sender, EventArgs e)
 		{
-			
-            foreach (DataGridViewCell cell in ProductsOnOrderDataGrid.SelectedCells)
-            {
+
+			foreach (DataGridViewCell cell in ProductsOnOrderDataGrid.SelectedCells)
+			{
 				ProductsOnOrderDataGrid.BeginEdit(false);
+				
+				
 				Console.WriteLine(cell.Value);
+				
 			}
-        }
+		}
+		private void ProductsOnOrderView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+		{
+			Console.WriteLine("Cell Value Changed");
+		}
+		private void ProductListSaveBtn_Click(object sender, EventArgs e)
+		{
+			string columnName;
+			int productNumber;
+			double newValue;
+			foreach (DataGridViewCell cell in ProductsOnOrderDataGrid.SelectedCells)
+			{
+				Console.WriteLine($"Selected cell Value: {cell.OwningColumn.Name}");
+				foreach (DataGridViewTextBoxCell c in cell.OwningRow.Cells)
+				{
+					columnName = c.OwningColumn.HeaderText;
+					//TODO Exception handling on c.Value (Can throw exceptions)
+					if (columnName.ToLower() == "productnumber"
+						&& int.TryParse($"{c.Value}", out productNumber))
+					{
+						MessageBox.Show("Successfully Saved.", "Success");
+						
+					}
+					else if (columnName.ToLower() =="qty")
+					{
+						Console.WriteLine();
+					}
+
+				}
+
+			}
+			//productTableAdapter.UpdateProductCell(miniBatchDataSet.Product, productNumber, columnName, newValue);
+			//productTableAdapter.Fill(miniBatchDataSet.Product);
+		}
+
+		private void ProductCancelBtn_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void ProductNumberLabel_Click(object sender, EventArgs e)
+		{
+
+		}
 
 		private void Creation_TimeLabel_Click(object sender, EventArgs e)
 		{
@@ -166,7 +204,9 @@ namespace MiniBatchConreteDelivery
 
 		private void Creation_DeliveryCostTextBox_TextChanged(object sender, EventArgs e)
 		{
-		
+
 		}
+
 	}
 }
+

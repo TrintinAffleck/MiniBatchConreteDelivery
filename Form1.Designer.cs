@@ -63,7 +63,7 @@
 			this.CustomerListSaveBtn = new System.Windows.Forms.Button();
 			this.CustomerListEditBtn = new System.Windows.Forms.Button();
 			this.CustomerListClearFieldsBtn = new System.Windows.Forms.Button();
-			this.CustomerListClearBtn = new System.Windows.Forms.Button();
+			this.CustomerListCancelBtn = new System.Windows.Forms.Button();
 			this.HistoryGroupBox = new System.Windows.Forms.GroupBox();
 			this.InvoiceHistorySaveBtn = new System.Windows.Forms.Button();
 			this.InvoiceHistoryDataGrid = new System.Windows.Forms.DataGridView();
@@ -76,7 +76,7 @@
 			this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.InvoiceHistoryEditBtn = new System.Windows.Forms.Button();
 			this.InvoiceHistoryClearFieldsBtn = new System.Windows.Forms.Button();
-			this.InvoiceHistoryClearBtn = new System.Windows.Forms.Button();
+			this.InvoiceHistoryCancelBtn = new System.Windows.Forms.Button();
 			this.ProductsOnOrderGroupBox = new System.Windows.Forms.GroupBox();
 			this.ProductsSaveBtn = new System.Windows.Forms.Button();
 			this.ProductsOnOrderDataGrid = new System.Windows.Forms.DataGridView();
@@ -93,7 +93,7 @@
 			this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.ProductsEditBtn = new System.Windows.Forms.Button();
 			this.ProductsClearFieldsBtn = new System.Windows.Forms.Button();
-			this.ProductsClearBtn = new System.Windows.Forms.Button();
+			this.ProductsCancelBtn = new System.Windows.Forms.Button();
 			this.invoiceNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dueDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.deliveryCostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -363,7 +363,7 @@
 			this.CustomerListGroupBox.Controls.Add(this.CustomerListSaveBtn);
 			this.CustomerListGroupBox.Controls.Add(this.CustomerListEditBtn);
 			this.CustomerListGroupBox.Controls.Add(this.CustomerListClearFieldsBtn);
-			this.CustomerListGroupBox.Controls.Add(this.CustomerListClearBtn);
+			this.CustomerListGroupBox.Controls.Add(this.CustomerListCancelBtn);
 			this.CustomerListGroupBox.Location = new System.Drawing.Point(20, 263);
 			this.CustomerListGroupBox.Name = "CustomerListGroupBox";
 			this.CustomerListGroupBox.Size = new System.Drawing.Size(1025, 219);
@@ -462,16 +462,17 @@
 			this.CustomerListClearFieldsBtn.TabIndex = 7;
 			this.CustomerListClearFieldsBtn.Text = "Clear Selected Fields";
 			this.CustomerListClearFieldsBtn.UseVisualStyleBackColor = true;
+			this.CustomerListClearFieldsBtn.Click += new System.EventHandler(this.TransactionSystemForm_Load);
 			// 
-			// CustomerListClearBtn
+			// CustomerListCancelBtn
 			// 
-			this.CustomerListClearBtn.Location = new System.Drawing.Point(524, 180);
-			this.CustomerListClearBtn.Name = "CustomerListClearBtn";
-			this.CustomerListClearBtn.Size = new System.Drawing.Size(100, 30);
-			this.CustomerListClearBtn.TabIndex = 6;
-			this.CustomerListClearBtn.Text = "Clear";
-			this.CustomerListClearBtn.UseVisualStyleBackColor = true;
-			this.CustomerListClearBtn.Click += new System.EventHandler(this.CustomerListClearBtn_Click);
+			this.CustomerListCancelBtn.Location = new System.Drawing.Point(524, 180);
+			this.CustomerListCancelBtn.Name = "CustomerListCancelBtn";
+			this.CustomerListCancelBtn.Size = new System.Drawing.Size(100, 30);
+			this.CustomerListCancelBtn.TabIndex = 6;
+			this.CustomerListCancelBtn.Text = "Cancel";
+			this.CustomerListCancelBtn.UseVisualStyleBackColor = true;
+			this.CustomerListCancelBtn.Click += new System.EventHandler(this.CustomerListCancelBtn_Click);
 			// 
 			// HistoryGroupBox
 			// 
@@ -479,7 +480,7 @@
 			this.HistoryGroupBox.Controls.Add(this.InvoiceHistoryDataGrid);
 			this.HistoryGroupBox.Controls.Add(this.InvoiceHistoryEditBtn);
 			this.HistoryGroupBox.Controls.Add(this.InvoiceHistoryClearFieldsBtn);
-			this.HistoryGroupBox.Controls.Add(this.InvoiceHistoryClearBtn);
+			this.HistoryGroupBox.Controls.Add(this.InvoiceHistoryCancelBtn);
 			this.HistoryGroupBox.Location = new System.Drawing.Point(19, 488);
 			this.HistoryGroupBox.Name = "HistoryGroupBox";
 			this.HistoryGroupBox.Size = new System.Drawing.Size(1025, 214);
@@ -577,15 +578,15 @@
 			this.InvoiceHistoryClearFieldsBtn.UseVisualStyleBackColor = true;
 			this.InvoiceHistoryClearFieldsBtn.Click += new System.EventHandler(this.InvoiceHistoryClearFieldsBtn_Click);
 			// 
-			// InvoiceHistoryClearBtn
+			// InvoiceHistoryCancelBtn
 			// 
-			this.InvoiceHistoryClearBtn.Location = new System.Drawing.Point(525, 172);
-			this.InvoiceHistoryClearBtn.Name = "InvoiceHistoryClearBtn";
-			this.InvoiceHistoryClearBtn.Size = new System.Drawing.Size(100, 30);
-			this.InvoiceHistoryClearBtn.TabIndex = 10;
-			this.InvoiceHistoryClearBtn.Text = "Clear";
-			this.InvoiceHistoryClearBtn.UseVisualStyleBackColor = true;
-			this.InvoiceHistoryClearBtn.Click += new System.EventHandler(this.InvoiceHistoryClearBtn_Click);
+			this.InvoiceHistoryCancelBtn.Location = new System.Drawing.Point(525, 172);
+			this.InvoiceHistoryCancelBtn.Name = "InvoiceHistoryCancelBtn";
+			this.InvoiceHistoryCancelBtn.Size = new System.Drawing.Size(100, 30);
+			this.InvoiceHistoryCancelBtn.TabIndex = 10;
+			this.InvoiceHistoryCancelBtn.Text = "Cancel";
+			this.InvoiceHistoryCancelBtn.UseVisualStyleBackColor = true;
+			this.InvoiceHistoryCancelBtn.Click += new System.EventHandler(this.InvoiceHistoryCancelBtn_Click);
 			// 
 			// ProductsOnOrderGroupBox
 			// 
@@ -593,7 +594,7 @@
 			this.ProductsOnOrderGroupBox.Controls.Add(this.ProductsOnOrderDataGrid);
 			this.ProductsOnOrderGroupBox.Controls.Add(this.ProductsEditBtn);
 			this.ProductsOnOrderGroupBox.Controls.Add(this.ProductsClearFieldsBtn);
-			this.ProductsOnOrderGroupBox.Controls.Add(this.ProductsClearBtn);
+			this.ProductsOnOrderGroupBox.Controls.Add(this.ProductsCancelBtn);
 			this.ProductsOnOrderGroupBox.Location = new System.Drawing.Point(19, 708);
 			this.ProductsOnOrderGroupBox.Name = "ProductsOnOrderGroupBox";
 			this.ProductsOnOrderGroupBox.Size = new System.Drawing.Size(1025, 227);
@@ -609,6 +610,7 @@
 			this.ProductsSaveBtn.TabIndex = 17;
 			this.ProductsSaveBtn.Text = "Save";
 			this.ProductsSaveBtn.UseVisualStyleBackColor = true;
+			this.ProductsSaveBtn.Click += new System.EventHandler(this.ProductListSaveBtn_Click);
 			// 
 			// ProductsOnOrderDataGrid
 			// 
@@ -636,10 +638,12 @@
 			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
 			this.ProductsOnOrderDataGrid.DefaultCellStyle = dataGridViewCellStyle1;
 			this.ProductsOnOrderDataGrid.Location = new System.Drawing.Point(11, 20);
+			this.ProductsOnOrderDataGrid.MultiSelect = false;
 			this.ProductsOnOrderDataGrid.Name = "ProductsOnOrderDataGrid";
 			this.ProductsOnOrderDataGrid.RowTemplate.DefaultCellStyle.NullValue = null;
 			this.ProductsOnOrderDataGrid.Size = new System.Drawing.Size(1001, 162);
 			this.ProductsOnOrderDataGrid.TabIndex = 0;
+			this.ProductsOnOrderDataGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsOnOrderView_CellValueChanged);
 			// 
 			// itemCodeDataGridViewTextBoxColumn
 			// 
@@ -734,14 +738,15 @@
 			this.ProductsClearFieldsBtn.Text = "Clear Selected Fields";
 			this.ProductsClearFieldsBtn.UseVisualStyleBackColor = true;
 			// 
-			// ProductsClearBtn
+			// ProductsCancelBtn
 			// 
-			this.ProductsClearBtn.Location = new System.Drawing.Point(525, 188);
-			this.ProductsClearBtn.Name = "ProductsClearBtn";
-			this.ProductsClearBtn.Size = new System.Drawing.Size(100, 30);
-			this.ProductsClearBtn.TabIndex = 14;
-			this.ProductsClearBtn.Text = "Clear";
-			this.ProductsClearBtn.UseVisualStyleBackColor = true;
+			this.ProductsCancelBtn.Location = new System.Drawing.Point(525, 188);
+			this.ProductsCancelBtn.Name = "ProductsCancelBtn";
+			this.ProductsCancelBtn.Size = new System.Drawing.Size(100, 30);
+			this.ProductsCancelBtn.TabIndex = 14;
+			this.ProductsCancelBtn.Text = "Cancel";
+			this.ProductsCancelBtn.UseVisualStyleBackColor = true;
+			this.ProductsCancelBtn.Click += new System.EventHandler(this.ProductCancelBtn_Click);
 			// 
 			// invoiceNumberDataGridViewTextBoxColumn
 			// 
@@ -1179,15 +1184,15 @@
 		private System.Windows.Forms.Button CustomerListSaveBtn;
 		private System.Windows.Forms.Button CustomerListEditBtn;
 		private System.Windows.Forms.Button CustomerListClearFieldsBtn;
-		private System.Windows.Forms.Button CustomerListClearBtn;
+		private System.Windows.Forms.Button CustomerListCancelBtn;
 		private System.Windows.Forms.Button InvoiceHistorySaveBtn;
 		private System.Windows.Forms.Button InvoiceHistoryEditBtn;
 		private System.Windows.Forms.Button InvoiceHistoryClearFieldsBtn;
-		private System.Windows.Forms.Button InvoiceHistoryClearBtn;
+		private System.Windows.Forms.Button InvoiceHistoryCancelBtn;
 		private System.Windows.Forms.Button ProductsSaveBtn;
 		private System.Windows.Forms.Button ProductsEditBtn;
 		private System.Windows.Forms.Button ProductsClearFieldsBtn;
-		private System.Windows.Forms.Button ProductsClearBtn;
+		private System.Windows.Forms.Button ProductsCancelBtn;
 		private System.Windows.Forms.DataGridView CustomerListDataGrid;
 		private System.Windows.Forms.ComboBox PmtMtdComboBox;
 		private System.Windows.Forms.Label Creation_PmtMtdLabel;
