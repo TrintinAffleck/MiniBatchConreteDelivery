@@ -61,6 +61,10 @@ namespace MiniBatchConreteDelivery
 
 		private void TransactionSystemForm_Load(object sender, EventArgs e)
 		{
+			ProductsDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
+			CustomerListDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
+			InvoiceHistoryDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
+
 			// TODO: This line of code loads data into the 'miniBatchDataSet.Product' table. You can move, or remove it, as needed.
 			productTableAdapter.Fill(miniBatchDataSet.Product);
 			ProductsOnOrderDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
