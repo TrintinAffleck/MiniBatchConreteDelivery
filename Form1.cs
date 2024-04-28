@@ -77,6 +77,9 @@ namespace MiniBatchConreteDelivery
 			ProductsOnOrderDataGrid.Columns[2].DefaultCellStyle.Format = "N2";
 			ProductsOnOrderDataGrid.Columns[6].DefaultCellStyle.Format = "N2";
 			
+			ProductsDataGrid.Columns[2].DefaultCellStyle.Format = "N2";
+			ProductsDataGrid.Columns[6].DefaultCellStyle.Format = "N2";
+			
 		}
 
 		private void CreationGroupBox_Enter(object sender, EventArgs e)
