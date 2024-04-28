@@ -79,7 +79,7 @@
 			this.InvoiceHistoryCancelBtn = new System.Windows.Forms.Button();
 			this.ProductsOnOrderGroupBox = new System.Windows.Forms.GroupBox();
 			this.ProductsSaveBtn = new System.Windows.Forms.Button();
-			this.ProductsOnOrderDataGrid = new System.Windows.Forms.DataGridView();
+			this.ProductsDataGrid = new System.Windows.Forms.DataGridView();
 			this.itemCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.productDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.valueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -141,7 +141,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.InvoiceHistoryDataGrid)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
 			this.ProductsOnOrderGroupBox.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.ProductsOnOrderDataGrid)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.ProductsDataGrid)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
 			this.CreateOrderInvoiceGroupBox.SuspendLayout();
 			this.InvoiceGroupBox.SuspendLayout();
@@ -387,6 +387,7 @@
 			this.CustomerListDataGrid.Name = "CustomerListDataGrid";
 			this.CustomerListDataGrid.Size = new System.Drawing.Size(995, 150);
 			this.CustomerListDataGrid.TabIndex = 10;
+			this.CustomerListDataGrid.Leave += new System.EventHandler(this.CustomerListCancelBtn_Click);
 			// 
 			// customerNumberDataGridViewTextBoxColumn
 			// 
@@ -515,6 +516,7 @@
 			this.InvoiceHistoryDataGrid.Name = "InvoiceHistoryDataGrid";
 			this.InvoiceHistoryDataGrid.Size = new System.Drawing.Size(997, 142);
 			this.InvoiceHistoryDataGrid.TabIndex = 0;
+			this.InvoiceHistoryDataGrid.Leave += new System.EventHandler(this.InvoiceHistoryCancelBtn_Click);
 			// 
 			// invoiceNumberDataGridViewTextBoxColumn1
 			// 
@@ -591,7 +593,7 @@
 			// ProductsOnOrderGroupBox
 			// 
 			this.ProductsOnOrderGroupBox.Controls.Add(this.ProductsSaveBtn);
-			this.ProductsOnOrderGroupBox.Controls.Add(this.ProductsOnOrderDataGrid);
+			this.ProductsOnOrderGroupBox.Controls.Add(this.ProductsDataGrid);
 			this.ProductsOnOrderGroupBox.Controls.Add(this.ProductsEditBtn);
 			this.ProductsOnOrderGroupBox.Controls.Add(this.ProductsClearFieldsBtn);
 			this.ProductsOnOrderGroupBox.Controls.Add(this.ProductsCancelBtn);
@@ -612,11 +614,11 @@
 			this.ProductsSaveBtn.UseVisualStyleBackColor = true;
 			this.ProductsSaveBtn.Click += new System.EventHandler(this.ProductListSaveBtn_Click);
 			// 
-			// ProductsOnOrderDataGrid
+			// ProductsDataGrid
 			// 
-			this.ProductsOnOrderDataGrid.AutoGenerateColumns = false;
-			this.ProductsOnOrderDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.ProductsOnOrderDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+			this.ProductsDataGrid.AutoGenerateColumns = false;
+			this.ProductsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.ProductsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.itemCodeDataGridViewTextBoxColumn,
             this.productDescriptionDataGridViewTextBoxColumn,
             this.valueDataGridViewTextBoxColumn,
@@ -627,7 +629,7 @@
             this.invoiceNumberDataGridViewTextBoxColumn2,
             this.orderNumberDataGridViewTextBoxColumn2,
             this.qtyDataGridViewTextBoxColumn});
-			this.ProductsOnOrderDataGrid.DataSource = this.productBindingSource;
+			this.ProductsDataGrid.DataSource = this.productBindingSource;
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
 			dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11.25F);
@@ -636,14 +638,15 @@
 			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
 			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
 			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.ProductsOnOrderDataGrid.DefaultCellStyle = dataGridViewCellStyle1;
-			this.ProductsOnOrderDataGrid.Location = new System.Drawing.Point(11, 20);
-			this.ProductsOnOrderDataGrid.MultiSelect = false;
-			this.ProductsOnOrderDataGrid.Name = "ProductsOnOrderDataGrid";
-			this.ProductsOnOrderDataGrid.RowTemplate.DefaultCellStyle.NullValue = null;
-			this.ProductsOnOrderDataGrid.Size = new System.Drawing.Size(1001, 162);
-			this.ProductsOnOrderDataGrid.TabIndex = 0;
-			this.ProductsOnOrderDataGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsOnOrderView_CellValueChanged);
+			this.ProductsDataGrid.DefaultCellStyle = dataGridViewCellStyle1;
+			this.ProductsDataGrid.Location = new System.Drawing.Point(11, 20);
+			this.ProductsDataGrid.MultiSelect = false;
+			this.ProductsDataGrid.Name = "ProductsDataGrid";
+			this.ProductsDataGrid.RowTemplate.DefaultCellStyle.NullValue = null;
+			this.ProductsDataGrid.Size = new System.Drawing.Size(1001, 162);
+			this.ProductsDataGrid.TabIndex = 0;
+			this.ProductsDataGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsListCell_Changed);
+			this.ProductsDataGrid.Leave += new System.EventHandler(this.ProductCancelBtn_Click);
 			// 
 			// itemCodeDataGridViewTextBoxColumn
 			// 
@@ -699,12 +702,14 @@
 			this.invoiceNumberDataGridViewTextBoxColumn2.DataPropertyName = "InvoiceNumber";
 			this.invoiceNumberDataGridViewTextBoxColumn2.HeaderText = "InvoiceNumber";
 			this.invoiceNumberDataGridViewTextBoxColumn2.Name = "invoiceNumberDataGridViewTextBoxColumn2";
+			this.invoiceNumberDataGridViewTextBoxColumn2.ReadOnly = true;
 			// 
 			// orderNumberDataGridViewTextBoxColumn2
 			// 
 			this.orderNumberDataGridViewTextBoxColumn2.DataPropertyName = "OrderNumber";
 			this.orderNumberDataGridViewTextBoxColumn2.HeaderText = "OrderNumber";
 			this.orderNumberDataGridViewTextBoxColumn2.Name = "orderNumberDataGridViewTextBoxColumn2";
+			this.orderNumberDataGridViewTextBoxColumn2.ReadOnly = true;
 			// 
 			// qtyDataGridViewTextBoxColumn
 			// 
@@ -1113,7 +1118,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.InvoiceHistoryDataGrid)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
 			this.ProductsOnOrderGroupBox.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.ProductsOnOrderDataGrid)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.ProductsDataGrid)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
 			this.CreateOrderInvoiceGroupBox.ResumeLayout(false);
 			this.CreateOrderInvoiceGroupBox.PerformLayout();
@@ -1153,7 +1158,7 @@
 		private System.Windows.Forms.GroupBox CustomerListGroupBox;
 		private System.Windows.Forms.GroupBox HistoryGroupBox;
 		private System.Windows.Forms.GroupBox ProductsOnOrderGroupBox;
-		private System.Windows.Forms.DataGridView ProductsOnOrderDataGrid;
+		private System.Windows.Forms.DataGridView ProductsDataGrid;
 		private System.Windows.Forms.DataGridViewTextBoxColumn invoiceNumberDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dueDateDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn deliveryCostDataGridViewTextBoxColumn;
