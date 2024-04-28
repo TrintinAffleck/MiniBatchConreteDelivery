@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 
@@ -9,7 +10,7 @@ namespace MiniBatchConreteDelivery
 		public TransactionSystemForm()
 		{
 			InitializeComponent();
-			
+			DisableMultiSelect();
 		}
 
 		private void HeaderLabel_Click(object sender, EventArgs e)
@@ -67,16 +68,11 @@ namespace MiniBatchConreteDelivery
 
 			// TODO: This line of code loads data into the 'miniBatchDataSet.Product' table. You can move, or remove it, as needed.
 			productTableAdapter.Fill(miniBatchDataSet.Product);
-			ProductsOnOrderDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
 			// TODO: This line of code loads data into the 'miniBatchDataSet.Invoice' table. You can move, or remove it, as needed.
 			invoiceTableAdapter.Fill(miniBatchDataSet.Invoice);
-			InvoiceHistoryDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
 			// TODO: This line of code loads data into the 'miniBatchDataSet.Customer' table. You can move, or remove it, as needed.
 			customerTableAdapter.Fill(miniBatchDataSet.Customer);
-			CustomerListDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
-			ProductsOnOrderDataGrid.Columns[2].DefaultCellStyle.Format = "N2";
-			ProductsOnOrderDataGrid.Columns[6].DefaultCellStyle.Format = "N2";
-			
+
 			ProductsDataGrid.Columns[2].DefaultCellStyle.Format = "N2";
 			ProductsDataGrid.Columns[6].DefaultCellStyle.Format = "N2";
 			
@@ -155,7 +151,7 @@ namespace MiniBatchConreteDelivery
 		}
 		List<DataGridViewCell> edittedCells = new List<DataGridViewCell>();
 		private void ProductsListCell_Changed(object sender, DataGridViewCellEventArgs e)
-			{
+		{
 			int rowIndex = e.RowIndex;
 			int columnIndex = e.ColumnIndex;
 			if (rowIndex >= 0)
@@ -171,40 +167,32 @@ namespace MiniBatchConreteDelivery
 							edittedCells.Add(cell);
 						}
 					}
+				}
 			}
-		}
-		private void ProductsOnOrderView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-		{
-			Console.WriteLine("Cell Value Changed");
 		}
 		private void ProductListSaveBtn_Click(object sender, EventArgs e)
 		{
-			string columnName;
-			int productNumber;
-			double newValue;
-			foreach (DataGridViewCell cell in ProductsOnOrderDataGrid.SelectedCells)
+			int productNumber = 0;
+			string newValue = "";
+			string columnName = "";
+			bool success = false;
+			foreach (DataGridViewCell cell in edittedCells)
 			{
-				Console.WriteLine($"Selected cell Value: {cell.OwningColumn.Name}");
-				foreach (DataGridViewTextBoxCell c in cell.OwningRow.Cells)
-				{
-					columnName = c.OwningColumn.HeaderText;
-					//TODO Exception handling on c.Value (Can throw exceptions)
-					if (columnName.ToLower() == "productnumber"
-						&& int.TryParse($"{c.Value}", out productNumber))
-					{
-						MessageBox.Show("Successfully Saved.", "Success");
-						
-					}
-					else if (columnName.ToLower() =="qty")
-					{
-						Console.WriteLine();
-					}
-
-				}
-
+				
 			}
-			//productTableAdapter.UpdateProductCell(miniBatchDataSet.Product, productNumber, columnName, newValue);
-			//productTableAdapter.Fill(miniBatchDataSet.Product);
+			if (productNumber != 0 &&
+				newValue != "" &&
+				columnName != "")
+			{
+				if (success)
+				{
+					productTableAdapter.UpdateProductCell(miniBatchDataSet.Product, productNumber, columnName, newValue);
+					productTableAdapter.Fill(miniBatchDataSet.Product);
+				}
+			}
+
+			
+
 		}
 
 		private void ProductCancelBtn_Click(object sender, EventArgs e)
