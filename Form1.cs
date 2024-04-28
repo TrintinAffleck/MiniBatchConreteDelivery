@@ -143,14 +143,27 @@ namespace MiniBatchConreteDelivery
 
 		private void ProductListEditBtn_Click(object sender, EventArgs e)
 		{
-
-			foreach (DataGridViewCell cell in ProductsOnOrderDataGrid.SelectedCells)
+			//TODO Exception Handling
+			ProductsDataGrid.BeginEdit(false);
+		}
+		List<DataGridViewCell> edittedCells = new List<DataGridViewCell>();
+		private void ProductsListCell_Changed(object sender, DataGridViewCellEventArgs e)
 			{
-				ProductsOnOrderDataGrid.BeginEdit(false);
-				
-				
-				Console.WriteLine(cell.Value);
-				
+			int rowIndex = e.RowIndex;
+			int columnIndex = e.ColumnIndex;
+			if (rowIndex >= 0)
+			{
+				foreach (DataGridViewRow row in ProductsDataGrid.Rows)
+				{
+					foreach(DataGridViewCell cell in row.Cells)
+					{
+						if (cell.ColumnIndex == columnIndex &&
+							cell.RowIndex == rowIndex &&
+							!edittedCells.Contains(cell))
+						{
+							edittedCells.Add(cell);
+						}
+					}
 			}
 		}
 		private void ProductsOnOrderView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
