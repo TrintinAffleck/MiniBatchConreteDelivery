@@ -102,7 +102,7 @@ namespace MiniBatchConreteDelivery
 
 		private void CustomerListCancelBtn_Click(object sender, EventArgs e)
 		{
-
+			CustomerListDataGrid.CancelEdit();
 		}
 
 		private void CustomerListEditBtn_Click(object sender, EventArgs e)
@@ -123,7 +123,7 @@ namespace MiniBatchConreteDelivery
 
 		private void InvoiceHistoryCancelBtn_Click(object sender, EventArgs e)
 		{
-
+			InvoiceHistoryDataGrid.CancelEdit();
 		}
 
 		private void InvoiceHistoryClearFieldsBtn_Click(object sender, EventArgs e)
@@ -202,7 +202,7 @@ namespace MiniBatchConreteDelivery
 
 		private void ProductCancelBtn_Click(object sender, EventArgs e)
 		{
-
+			ProductsDataGrid.CancelEdit();
 		}
 
 		private void ProductNumberLabel_Click(object sender, EventArgs e)
