@@ -6,9 +6,16 @@ namespace MiniBatchConreteDelivery
 	{ 
 		public void DisableMultiSelect()
 		{
-			ProductsDataGrid.MultiSelect = false;
+			productsDataGrid.MultiSelect = false;
 			InvoiceHistoryDataGrid.MultiSelect = false;
 			CustomerListDataGrid.MultiSelect = false;
 		}
+
+		public bool IsNumeric(DataGridViewCell cell)
+		{
+			if (cell.Value == null) { return false; }
+			return double.TryParse(cell.Value.ToString(), out _) ? true : false;
+		}
+
 	}
 }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Runtime.Remoting.Messaging;
 using System.Windows.Forms;
 
 
@@ -62,7 +64,7 @@ namespace MiniBatchConreteDelivery
 
 		private void TransactionSystemForm_Load(object sender, EventArgs e)
 		{
-			ProductsDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
+			productsDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
 			CustomerListDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
 			InvoiceHistoryDataGrid.EditMode = DataGridViewEditMode.EditProgrammatically;
 
@@ -73,8 +75,8 @@ namespace MiniBatchConreteDelivery
 			// TODO: This line of code loads data into the 'miniBatchDataSet.Customer' table. You can move, or remove it, as needed.
 			customerTableAdapter.Fill(miniBatchDataSet.Customer);
 
-			ProductsDataGrid.Columns[2].DefaultCellStyle.Format = "N2";
-			ProductsDataGrid.Columns[6].DefaultCellStyle.Format = "N2";
+			productsDataGrid.Columns[2].DefaultCellStyle.Format = "N2";
+			productsDataGrid.Columns[6].DefaultCellStyle.Format = "N2";
 			
 		}
 
@@ -147,7 +149,7 @@ namespace MiniBatchConreteDelivery
 		private void ProductListEditBtn_Click(object sender, EventArgs e)
 		{
 			//TODO Exception Handling
-			ProductsDataGrid.BeginEdit(false);
+			productsDataGrid.BeginEdit(false);
 		}
 		List<DataGridViewCell> edittedCells = new List<DataGridViewCell>();
 		private void ProductsListCell_Changed(object sender, DataGridViewCellEventArgs e)
@@ -156,7 +158,7 @@ namespace MiniBatchConreteDelivery
 			int columnIndex = e.ColumnIndex;
 			if (rowIndex >= 0)
 			{
-				foreach (DataGridViewRow row in ProductsDataGrid.Rows)
+				foreach (DataGridViewRow row in productsDataGrid.Rows)
 				{
 					foreach(DataGridViewCell cell in row.Cells)
 					{
@@ -170,39 +172,208 @@ namespace MiniBatchConreteDelivery
 				}
 			}
 		}
+
+		private void DataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+		{
+
+			MessageBox.Show("Error happened " + e.Context.ToString());
+
+
+			if ((e.Exception) is ConstraintException)
+			{
+				DataGridView view = (DataGridView)sender;
+				view.Rows[e.RowIndex].ErrorText = "an error";
+				view.Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = "an error";
+
+				e.ThrowException = false;
+			}
+		}
+
+		private void CellEdit_DoubleClick(object sender, DataGridViewCellEventArgs e)
+		{
+			productsDataGrid.BeginEdit(false);
+			
+		}
 		private void ProductListSaveBtn_Click(object sender, EventArgs e)
 		{
-			int productNumber = 0;
+			if (productsDataGrid.BeginEdit(false))
+			{
+				productsDataGrid.EndEdit();
+			}
+			int prodNum = 0;
 			string newValue = "";
 			string columnName = "";
 			bool success = false;
+			bool displaySuccessMessage = false;
 			foreach (DataGridViewCell cell in edittedCells)
 			{
+				if (prodNum == 0 &&
+					newValue == "" &&
+					columnName == "" &&
+					cell.Value != null)
+				{
+					string currColName = cell.OwningColumn.HeaderText.ToLower();
+					prodNum = (int)cell.OwningRow.Cells[3].Value;
+					bool isValueNum = IsNumeric(cell);
+					switch (currColName)
+					{
+						case "itemcode":
+							{
+								if (!isValueNum)
+								{
+									columnName = currColName;
+									newValue = cell.Value.ToString();
+									success = true;
+								}
+								break;
+							}
+						case "productdescription":
+							{
+								if (!isValueNum)
+								{
+									columnName = currColName;
+									newValue = cell.Value.ToString();
+									success = true;
+								}
+								break;
+							}
+						case "value":
+							{
+								if (isValueNum)
+								{
+									columnName = currColName;
+									newValue = cell.Value.ToString();
+									success = true;
+								}
+								break;
+							}
+						case "reorderquantity":
+							{
+								if (isValueNum)
+								{
+									columnName = currColName;
+									newValue = cell.Value.ToString();
+									prodNum = (int)cell.OwningRow.Cells[3].Value;
+									success = true;
+								}
+								break;
+							}
+						case "unitofmeassure":
+							{
+								if (!isValueNum)
+								{
+									columnName = currColName;
+									newValue = cell.Value.ToString();
+									prodNum = (int)cell.OwningRow.Cells[3].Value;
+									success = true;
+								}
+								break;
+							}
+						case "sellprice":
+							{
+								if (isValueNum)
+								{
+									columnName = currColName;
+									newValue = cell.Value.ToString();
+									prodNum = (int)cell.OwningRow.Cells[3].Value;
+									success = true;
+								}
+								break;
+							}
+						case "qty":
+							{
+								if (isValueNum)
+								{
+									columnName = currColName;
+									newValue = cell.Value.ToString();
+									prodNum = (int)cell.OwningRow.Cells[3].Value;
+									success = true;
+								}
+								break;
+							}
+
+					}
+					if (success)
+					{
+						productTableAdapter.ClearBeforeFill = false;
+						productTableAdapter.UpdateProductCell(miniBatchDataSet.Product, prodNum, columnName, newValue);
+						success = false;
+						prodNum = 0;
+						newValue = "";
+						columnName = "";
+						displaySuccessMessage = true;
+					}
+					else
+					{
+						MessageBox.Show($"Could not parse {cell.EditedFormattedValue}");
+					}
+					
+				}
 				
 			}
-			if (productNumber != 0 &&
-				newValue != "" &&
-				columnName != "")
+			if (displaySuccessMessage)
 			{
-				if (success)
-				{
-					productTableAdapter.UpdateProductCell(miniBatchDataSet.Product, productNumber, columnName, newValue);
-					productTableAdapter.Fill(miniBatchDataSet.Product);
-				}
+				MessageBox.Show("Successfully saved.");
 			}
-
-			
-
+			productTableAdapter.ClearBeforeFill = false;
+			productTableAdapter.Fill(miniBatchDataSet.Product);
+			edittedCells.Clear();
 		}
 
 		private void ProductCancelBtn_Click(object sender, EventArgs e)
 		{
-			ProductsDataGrid.CancelEdit();
+			productsDataGrid.CancelEdit();
 		}
 
 		private void ProductNumberLabel_Click(object sender, EventArgs e)
 		{
 
+		}
+
+		private void ProductClearFieldsBtn_Click(object sender, EventArgs e)
+		{
+			if (productsDataGrid.SelectedRows.Count > 0)
+			{
+				productsDataGrid.BeginEdit(false);
+				MiniBatchDataSet.ProductDataTable productDataset = miniBatchDataSet.Product;
+				DataGridViewRow currentRow = productsDataGrid.SelectedRows[0];
+				int productNumber = (int)currentRow.Cells[3].Value;
+				for (int i = 0; i < currentRow.Cells.Count; i++)
+				{
+					DataGridViewCell cell = currentRow.Cells[i];
+					string columnName = cell.OwningColumn.HeaderText.ToLower();
+					
+					if (!cell.ReadOnly &&
+						cell.Value != null)
+					{
+						productTableAdapter.ClearBeforeFill = false;
+						switch (cell.ValueType.Name.ToLower())
+						{
+							case "decimal":
+							case "int32":
+							case "double":
+								cell.Value = 0;
+								productTableAdapter.UpdateProductCell(productDataset, productNumber, columnName, "");
+								break;
+							case "string":
+								cell.Value = "";
+								productTableAdapter.UpdateProductCell(productDataset, productNumber, columnName, "");
+								break;
+							default:
+								MessageBox.Show($"Could not clear values for {cell.OwningColumn.HeaderText} column type: {cell.ValueType.Name} | Did not update database", "ERROR!");
+								break;
+						}
+						
+					}
+					else if (cell.ReadOnly)
+					{
+						i += 1;
+						Console.WriteLine($"Skipped Cell {cell.OwningColumn.HeaderText}");
+					}
+				}
+			}
+			productTableAdapter.ClearBeforeFill = false;
+			productTableAdapter.Fill(miniBatchDataSet.Product);
 		}
 
 		private void Creation_TimeLabel_Click(object sender, EventArgs e)
